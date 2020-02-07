@@ -1,0 +1,19 @@
+<!-- Note that on page.ejs, "page" was passed in as the "item" -->
+<div class="post-full">
+    <!-- Title -->
+    <h2 class="post-title">
+        <%- item.title || item.link %>
+    </h2>
+    <!-- Date and Author -->
+    <p class="post-meta">
+        <% if(item.author) { %>
+            by <%- item.author %>
+        <% } %>
+    </p>
+    <!-- Content -->
+    <%- item.content %>
+    <hr />
+    <!-- Tags and Categories links -->
+    <%- partial('_partial/article-tags', {item: item}) %>
+    <%- partial('_partial/article-categories', {item: item}) %>
+</div>

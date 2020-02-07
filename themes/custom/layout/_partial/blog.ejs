@@ -1,0 +1,15 @@
+<div class="blog">
+    <div class="post-container">
+        <% let posts = site.posts %>
+        <% posts.forEach(function(item) { %>
+            <% if (item.type === 'blog') { %>
+                <%- partial('_partial/article-snippet', {item: item}) %>
+            <% } %>
+        <% }) %>
+    </div>
+    <hr>
+    <!-- include pagination -->
+    <%- partial('_partial/pagination') %>
+    <!-- Sidebar to navigate all tags and categories -->
+    <%- partial('_partial/sidebar') %>
+</div>

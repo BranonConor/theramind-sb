@@ -1,0 +1,31 @@
+<div class="sidebar">
+    <div class="sidebar-module">
+        <h4>Projects</h4>
+        <ul class="list-styled">
+            <% let projects = site.posts %>
+            <% projects.forEach(function(item) { %>
+                <% if (item.type === 'project') { %>
+                    <li><a href="<%- config.root %><%- item.path %>"><%- item.title %></a></li>
+                <% } %>
+            <% }); %>
+        </ul>
+    </div>
+    <div class="sidebar-module">
+        <h4>Archives</h4>
+        <ul class="list-styled">
+            <li><a href="#">March 2014</a></li>
+            <li><a href="#">February 2014</a></li>
+            <li><a href="#">January 2014</a></li>
+            <li><a href="#">December 2013</a></li>
+            <li><a href="#">November 2013</a></li>
+        </ul>
+    </div>
+    <div class="sidebar-module">
+        <h4>Elsewhere</h4>
+        <ul class="list-styled">
+            <li><a href="#">Github</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+        </ul>
+    </div> 
+</div>

@@ -1,0 +1,42 @@
+<!-- THIS PAGE DEFINES WHAT APPEARS ON EVERY PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head Tags -->
+<%- partial('_partial/head') %>
+<body>
+    <!-- The Video (If it's the Homepage) -->
+    <% if (is_home()) { %>
+        <%- partial('_partial/video') %>
+    <% } %>
+    <!-- Navigation -->
+    <%- partial('_partial/nav') %>
+    <main>
+        <!-- Header -->
+        <div class="container">
+            <!-- Blog Header: title + subtitle -->
+            <%- partial('_partial/header') %>
+            <!-- MAIN CONTENT -->
+            <!-- 
+            pulls in index.ejs, which applies page format 
+            and pulls in page-full.ejs to bring in content
+            -->
+            <%- body %>
+            <!-- Homepage Content (If it's the Homepage) -->
+            <% if (is_home()) { %>
+                <%- partial('_partial/homepage') %>
+            <% } %>
+            <!-- If it's the Projects Page, render projects.ejs-->
+            <% if (page.layout == 'archive' && page.type == 'project') { %>
+                <%- partial('_partial/projects') %>
+            <% } %>
+            <!-- If it's the Blog Page, render blog.ejs-->
+            <% if (page.layout == 'archive' && page.type == 'blog') { %>
+                <%- partial('_partial/blog') %>
+            <% } %>
+        </div>
+    </main>
+    <%- partial('_partial/footer') %>
+    <!-- Scripts-->
+    <%- partial('_partial/scripts') %>
+</body>
+</html>

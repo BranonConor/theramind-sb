@@ -1,0 +1,16 @@
+
+<% if (item.tags && item.tags.length){ %>
+        <!-- 
+            Loop through and push each tag in post.tag 
+            with a link to its tag path, into an array
+            and list them
+        -->
+        <% var tags = []; %>
+        <% item.tags.forEach(function(tag){ %>
+            <%- tags.push('<a href="' + config.root + tag.path + '">#' + tag.name + '</a>'); %>
+        <% }); %>
+    <div class="blog-tags-container">
+        <span class="glyphicon glyphicon-tags"></span>
+        <%- tags.join(' ') %>
+    </div>
+    <% } %>

@@ -1,0 +1,26 @@
+<div class="post">
+    <!-- Title -->
+    <h2 class='post-title'>
+        <!-- items are just posts being passed in from index.ejs's function -->
+        <a href="<%- url_for(item.path) %>">
+            <%- item.title %>
+        </a>
+    </h2>
+    <!-- Author and Date -->
+    <p class='post-data'>
+        <%- item.date.format(config.date_format) %>
+        <% if(item.author) { %>
+            Author: <%- item.author %>
+        <% } %>
+    </p>
+    <!-- Post Content -->
+    <%- item.excerpt || item.content %>
+    <!-- If we are displaying an excerpt, add read more link -->
+    <% if (item.excerpt) { %>
+        <p class='snippet'>
+            <a href="<%- url_for(item.path) %>">
+                <%- theme.excerpt_link %>
+            </a>
+        </p>
+    <% } %>
+</div>
