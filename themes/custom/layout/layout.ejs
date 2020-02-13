@@ -4,17 +4,13 @@
 <!-- Head Tags -->
 <%- partial('_partial/head') %>
 <body>
-    <!-- The Video (If it's the Homepage) -->
-    <% if (is_home()) { %>
-        <%- partial('_partial/video') %>
-    <% } %>
+    <!-- Top Strip -->
+    <%- partial('_partial/top-strip') %>
     <!-- Navigation -->
     <%- partial('_partial/nav') %>
     <main>
         <!-- Header -->
         <div class="container">
-            <!-- Blog Header: title + subtitle -->
-            <%- partial('_partial/header') %>
             <!-- MAIN CONTENT -->
             <!-- 
             pulls in index.ejs, which applies page format 

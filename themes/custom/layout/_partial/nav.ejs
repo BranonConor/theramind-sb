@@ -1,3 +1,4 @@
+<!-- NAVIGATION -->
 <div class="nav">
     <div class="brand">
         
@@ -5,7 +6,7 @@
     <div class="navbar">
         <!-- Pull each menu item in from the local _config.yml file -->
         <% for (var i in theme.menu) { %>
-            <a class='navlink' href='<%- url_for(theme.menu[i]) %>'><%- i %></a>
+            <a class='navLink' href='<%- url_for(theme.menu[i]) %>'><%- i %></a>
         <% } %>
     </div>
     <div class="social">

@@ -1,0 +1,802 @@
+/* ------------- GLOBAL STYLES --------------- */
+html {
+	width: 100%;
+    min-height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    width: 100%;
+    height: 100%;
+	background: white;
+	margin: 0;
+	max-width: 100%;
+}
+a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    transition: 0.2s ease all;
+}
+a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: orange;
+    transition: width .6s;
+    position: absolute;
+    left: -50%;
+    top: 90%;
+    opacity: 0;
+    transition: 0.5s ease all;
+}
+a:hover {
+    color: orange;
+}
+a:hover::after {
+    width: 100%;
+    transform: translateX(50%);
+    transition: 0.25s ease all;
+    opacity: 1;
+}
+h1 {
+    font-size: 3rem;
+    padding: 0;
+    margin: 0;
+}
+/* ----------------- TOP STRIP ------------------ */
+.top-strip {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    border-bottom: 2px solid black;
+    max-height: 200px;
+}
+.top-strip img {
+    width: 250px;
+    height: 108px;
+    margin-left: 20px;
+}
+.top-strip span {
+    text-decoration: underline;
+}
+.strip-info {
+    display: flex;
+    justify-content: space-around;
+    padding-right: 50px;
+    align-items: center;
+}
+.strip-info i {
+    padding-right: 10px;
+    transform: rotate(-30deg) scale(0.8);
+    transition: 0.5s
+}
+.strip-info:hover i {
+    transform: rotate(+10deg) scale(1.1);
+    transition: 0.5s
+}
+.strip-info:hover span {
+    color: orange;
+    cursor: pointer;
+}
+/* --------------- NAVIGATION ---------------- */
+.nav {
+    color: black;
+    width: 100%;
+    letter-spacing: 5px;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    z-index: 4;
+    top: 0;
+    background: white;
+    border-bottom: 2px solid black;
+    will-change: transform;
+}
+.display-none {
+    display: none;
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 100vw;
+}
+.navLink {
+    padding: 0 20px;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    transition: 0.2s ease all;
+}
+.hamburger {
+    display: none;
+}
+.nav-mobile {
+    width: 100vw;
+    height: 0px;
+    transition: 0.4s ease-in;
+}
+.revealNavMobile {
+    -webkit-transition: 0.5s; /* Safari 4+ */
+    -moz-transition: 0.5s; /* Fx 5+ */
+    -o-transition: 0.5s; /* Opera 12+ */
+    transition: 0.5s; /* IE 10+, Fx 29+, */
+    height: 30vh;
+}
+.mobileLink {
+    text-align: right;
+    padding: 5px;
+    letter-spacing: 3px;
+    color: black;
+    position: relative;
+    z-index: 2;
+    max-width: 100vw;
+}
+.mobileLink:hover {
+    color: orange;
+    transition: 0.1s;
+}
+/*
+.move-and-fix {
+    position: fixed;
+    top: 100px;
+}
+*/
+/* ------------ HERO STRIP -------------- */
+.hero-strip {
+    background-image: url(/css/images/hero-image.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+}
+.thin-strip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    width: 100%;
+    padding: 40px;
+}
+.thin-strip hr {
+    width: 10%;
+}
+.thin-strip button {
+    padding: 15px 10px;
+    border-radius: 5px;
+    width: 100px;
+    height: auto;
+    margin: 20px 10px 10px 10px;
+    border: none;
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+}
+
+/* ----------- ABOUT STRIP ------------- */
+.about-strip {
+    background: #eee;
+    text-align: center;
+    padding: 75px 300px;
+}
+.about-strip img {
+    width: 100px;
+    height: auto;
+}
+
+/* --------- SERVICES AND CONDITIONS TREATED ---------- */
+.conditions-strip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 150px;
+}
+.conditions-strip i {
+    color: orange;
+}
+.conditions-strip h2 {
+    text-align: center;
+}
+.card-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0 100px;
+}
+.card-container h3 {
+  color: black;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.card-container p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 20px;
+  color: black;
+}
+.go-corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  background-color: #FFC350;
+  border-radius: 0 4px 0 32px;
+}
+.go-arrow {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: white;
+  font-family: courier, sans;
+}
+.card1 {
+  display: block;
+  position: relative;
+  max-width: 262px;
+  background-color: #eee;
+  border-radius: 4px;
+  padding: 32px 24px;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+}
+.card1:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: #FFC350;
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-out;
+}
+.card1:hover:before {
+    transform: scale(25);
+}
+.card1::after {
+    display: none;
+}
+.card1:hover p {
+    visibility: hidden;
+}
+.card1:hover h3 {
+    color: #FFFFFF;
+    transform: translateX(110px) scale(1.5);
+    transition: all 0.3s ease-out;
+}
+.card1 i {
+    display: none;
+}
+
+
+/* ---------- Testimonial strip ------------ */
+.testimonial-strip {
+    width: 100%;
+    height: 600px;
+    background-image: url(/css/images/sb-paddler.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.overlay {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    color: white;
+}
+.testimonial-strip i {
+    color: white;
+    padding: 100px;
+    transition: 0.4 ease all;
+}
+.testimonial-strip i:hover {
+    color: orange;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.testimonial {
+    width: 50%;
+    text-align: center;
+    position: absolute;
+    left: 25%;
+    transition: 0.5s ease all;
+}
+.active-quote {
+    opacity: 1;
+}
+.inactive-quote {
+    opacity: 0;
+}
+.testimonial h3 {
+    font-size: 2rem;
+}
+.testimonial p {
+    font-size: 1.25rem;
+}
+/* ---------------- INSURANCE STRIP ------------------ */
+.insurance-strip {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 50px 0 100px 0;
+}
+.insurance-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.insurance-strip i {
+    color: orange;
+}
+.insurance-strip p {
+    padding: 0 15px;
+}
+.insurance-carousel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.insurance-carousel img {
+    margin: 5px;
+    border: 2px solid lightgrey;
+    border-radius: 5px;
+    width: 125px;
+    height: 80px;
+    transition: 0.3s ease all;
+    background-color: white;
+}
+.insurance-carousel img:hover {
+    transform: translateY(-15px);
+}
+/* -------------- CONTACT FORM ----------------- */
+.form-strip {
+    background: #343434;
+    padding: 50px 0;
+}
+.form-strip h2 {
+    color: #eee;
+    text-align: center;
+    font-weight: thin;
+    font-size: 2.25rem;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+fieldset {
+    width: 500px;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+.fieldset-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.fieldset-wrapper div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+}
+input, select, textarea {
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+}
+.text-area {
+    width: 95%;
+}
+input, select, textarea {
+    border-bottom: 1px solid white;
+    height: 40px;
+    color: #ccc;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+input::placeholder, select::placeholder, textarea::placeholder {
+    color: #ccc;
+}
+label {
+    visibility: hidden;
+}
+.message {
+    text-align: center;
+    width: 100%;
+}
+.message label, input {
+    width: 100%;
+}
+.form-button {
+    width: 150px;
+    border: 1px solid white;
+    height: 60px;
+    margin: 20px;
+    background: rgb(228, 171, 65);
+    color: white;
+    font-weight: bold;
+    transition: 0.4s ease all;
+}
+.form-button:hover {
+    background: none;
+    color: #ccc;
+    cursor: pointer;
+    font-size: 1rem;
+}
+/* -------------- FOOTER ------------ */
+.footer-top {
+    width: 100%;
+    height: 75px;
+    background: #eee;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-top img {
+    width: 60px;
+    height: 60px;
+}
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    background-color: #343434;
+    padding: 20px 0;
+}
+.footer div {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer a, .footer p {
+    color: white;
+    font-size: 0.8rem;
+}
+.footer-info {
+    text-align: left;
+    align-items: flex-start;
+}
+.footer .footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+}
+.footer-social i {
+    font-size: 1.5rem;
+    transition: 0.3s ease all;
+}
+.footer-social a::after {
+    display: none;
+}
+.footer-social i:hover {
+    color: orange;
+}
+.footer-office p {
+    text-align: right;
+}
+.footer .footer-title {
+    letter-spacing: 3px;
+    color: orange;
+}
+
+
+/* ---------------- MEDIA QUERIES ----------------- */
+@media only screen and (max-width: 1200px) {
+    /* Top Strip */
+    .top-strip img {
+        width: 220px;
+        height: 95px;
+    }
+    /* About Strip */
+    .about-strip {
+        padding: 75px 200px;
+    }
+    /* Conditions Treated */
+    .conditions-strip {
+        padding: 100px;
+    }
+}
+@media only screen and (max-width: 950px) {
+    /* About Strip */
+    .about-strip {
+        padding: 75px 100px;
+    }
+    /* Conditions Treated */
+    .conditions-strip {
+        padding: 20px 0 50px 0;
+        background: url(/css/images/gradient.jpeg);
+        background-size: cover;
+    }
+    .conditions-strip h2 {
+        padding: 5px 10px 20px 10px;
+    }
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    .card1 {
+        width: 120px;
+        height: 25px;
+        margin: 5px;
+        padding-top: 20px;
+        box-shadow: 0px 2px 4px 1px rgba(8,8,8, 0.3);
+        border-radius: 9px;
+        background-color: white;
+    }
+    .card1 h3 {
+        position: relative;
+        top: -10px;
+        left: -5px;
+        font-size: 0.8rem;
+    }
+    .card1 p {
+        display: none;
+    }
+    .card1 div {
+        display: none;
+    }
+    .card1::before {
+        display: none;
+    }
+    .card1 i {
+        display: flex;
+        color: orange;
+        transform: scale(1.1);
+    }
+    .card1:hover h3 {
+        color: black;
+        transform: none;
+    }
+    /* Testimonials Strip */
+    .testimonial-strip i {
+        padding: 50px;
+    }
+}
+@media only screen and (max-width: 830px) {
+    .top-strip img {
+        width: 200px;
+        height: 90px;
+    }   
+    /* About Strip */
+    .about-strip {
+        padding: 75px 80px;
+    }
+    /* Testimonials Strip */
+    .testimonial-strip i {
+        padding: 25px;
+    }
+    /* Insurance */
+    .insurance-carousel i {
+        width: 110px;
+        height: 70px;
+    }
+    /* Footer */
+    .footer a, .footer p {
+        color: white;
+        font-size: 0.6rem;
+    }
+    .footer-social {
+        
+    }
+    .footer-social i {
+        font-size: 1.2rem;
+    }
+}
+@media only screen and (max-width: 640px) {
+    /* Top Strip */
+    .top-strip img {
+        width: 180px;
+        height: 80px;
+    }
+    /* Mobile Nav */
+    .nav {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+    .navbar {
+        display: none;
+        overflow: hidden;
+    }
+    .display-none {
+        display: block;
+        opacity: 0;
+    }
+    .nav-mobile {
+        width: 100vw;
+        height: 0px;
+        transition: 0.6s ease-in;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        left: 50px;
+        top: -100px;
+        opacity: 0;
+    }
+    .revealNavMobile {
+        -webkit-transition: 0.6s; /* Safari 4+ */
+        -moz-transition: 0.6s; /* Fx 5+ */
+        -o-transition: 0.6s; /* Opera 12+ */
+        transition: 0.6s; /* IE 10+, Fx 29+, */
+        height: 25vh;
+        transform: translateX(-40px) translateY(100px);
+        opacity: 1;
+    }
+    .mobileLink {
+        text-align: right;
+        padding: 5px;
+        letter-spacing: 3px;
+        color: black;
+        z-index: 5;
+        max-width: 100vw;
+        transition: 0.3s;
+    }
+    .mobileLink::after {
+        content: '';
+        width: 0;
+        height: 2px;
+        background: orange;
+        transition: width .6s;
+        position: absolute;
+        left: 25%;
+        top: 90%;
+        opacity: 0;
+        transition: 0.5s ease all;
+    }
+    .mobileLink:hover {
+        color: orange;
+    }
+    .mobileLink:hover::after {
+        width: 50%;
+        transform: translateX(50%);
+        transition: 0.25s ease all;
+        opacity: 1;
+    }
+    .hamburger {
+        display: inline-block;
+        cursor: pointer;
+        width: 20px;
+        height: auto;
+        padding: 10px 40px 10px 10px;
+        position: relative;
+        left: 0%;
+        transition: 0.4s ease all;
+    } 
+    .bar1, .bar3 {
+        width: 30px;
+        height: 4px;
+        background-color: black;
+        margin: 6px 0;
+        transition: 0.6s;
+    }
+    .bar2 {
+        width: 30px;
+        height: 4px;
+        background-color: black;
+        margin: 6px 0;
+        transition: 0.5s;
+    }
+    .change {
+        left: 5%;
+    }
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg);
+        transform: translateY(10px) rotate(-228deg);
+    }
+    /*  translate(3px, -5px) */
+    .change .bar2 {
+        transform: rotate(125deg) translateY(-10px) translateX(30px);
+        opacity: 0;
+    }
+    .change .bar3 {
+        -webkit-transform: rotate(45deg);
+        transform: translateY(-10px) rotate(48deg);
+    /*  translate(-9px, -12px) */
+    }
+    /* Hero Strip */
+    .hero-strip {
+        text-align: center;
+        background-image: url(hero-image-mobile.JPG);
+        background-attachment: scroll;
+    }
+    /* About Strip */
+    .about-strip {
+        padding: 75px 50px;
+    }
+    /* Testimonials Strip */
+    .testimonial-strip i {
+        font-size: 2.5rem;
+    }
+    .testimonial h3 {
+        font-size: 1.5rem;
+    }
+    .testimonial p {
+        font-size: 1rem;
+    }
+    /* Contact Form */
+    fieldset {
+        width: 300px;
+    }
+    /* Footer */
+    .footer {
+        padding: 20px 10px;
+    }
+    .footer .footer-social {
+        display: block;
+        padding: 0 20px;
+    }
+    
+}
+@media only screen and (max-width: 460px) {
+    .top-strip {
+        justify-content: center;
+        padding: 0;
+    }
+    .top-strip img {
+        margin: 0;
+    }
+    .strip-info {
+        display: none;
+    }
+    /* About Strip */
+    .about-strip {
+        padding: 75px 20px;
+    }
+}
+@media only screen and (max-width: 340px) {
+    /* Footer */
+    .footer div {
+        justify-content: flex-start;
+        height: 150px;
+    }
+}
