@@ -585,6 +585,12 @@ label {
     text-transform: uppercase;
     letter-spacing: 3px;
 }
+.post-title a:hover {
+    color: black;
+}
+.post-title a:hover::after {
+    display: none;
+}
 
 /* ---------------- MEDIA QUERIES ----------------- */
 @media only screen and (max-width: 1200px) {
