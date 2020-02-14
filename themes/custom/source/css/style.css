@@ -556,7 +556,7 @@ label {
     align-items: center;
 }
 .post-full {
-    padding: 50px 10%;
+    padding: 50px 20%;
 }
 .post-full a {
     color: orange;
@@ -570,6 +570,11 @@ label {
 }
 .post a {
     color: orange;
+}
+.post-title {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
 /* ---------------- MEDIA QUERIES ----------------- */
