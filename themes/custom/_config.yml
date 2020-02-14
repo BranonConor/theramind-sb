@@ -2,8 +2,7 @@
 menu: 
   Home: /
   About: /about
-  Projects: /projects
-  Blog: /news
+  News: /news
   Contact: /contact
 
 # Read More Text

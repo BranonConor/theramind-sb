@@ -8,9 +8,6 @@
     <%- partial('_partial/top-strip') %>
     <!-- Navigation -->
     <%- partial('_partial/nav') %>
-    <main>
-        <!-- Header -->
-        <div class="container">
             <!-- MAIN CONTENT -->
             <!-- 
             pulls in index.ejs, which applies page format 
@@ -29,8 +26,7 @@
             <% if (page.layout == 'archive' && page.type == 'blog') { %>
                 <%- partial('_partial/blog') %>
             <% } %>
-        </div>
-    </main>
+    <%- partial('_partial/contact-form') %>
     <%- partial('_partial/footer') %>
     <!-- Scripts-->
     <%- partial('_partial/scripts') %>

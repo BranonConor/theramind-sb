@@ -1,0 +1,38 @@
+<div class="form-strip">
+    <h2>Take the first step.</h2>
+    <form id="fs-frm" class='contact-form' name="department-contact-form" accept-charset="utf-8" action="https://formspree.io/xvoalkbq" method="POST">
+        <fieldset id="fs-frm-inputs">
+            <div class='fieldset-wrapper'>
+                <div class="name">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" name="name" id="full-name" placeholder="Full Name" required="required">
+                </div>
+                <div class="email">
+                    <label for="email-address">Email Address</label>
+                    <input type="email" name="_replyto" id="email-address" placeholder="Email Address" required="required">
+                </div>
+                <div class="phone">
+                    <label for="phone-number">Phone Number</label>
+                    <input type="tel" name="phone" id="phone-number" placeholder="Phone Number" required="">
+                </div>
+                <div class="location">
+                    <label for="location">Location</label>
+                    <select name="location" id="location" required="required">
+                      <option value="Select" selected="" disabled="">Select A Location</option>
+                      <option value="Santa Barbara">Santa Barbara, CA</option>
+                      <option value="Los Angeles">Los Angeles, CA</option>
+                      <option value="Santa Monica">Santa Monica, CA</option>
+                      <option value="Vernon Hills">Vernon Hills, IL</option>
+                      <option value="Chicago">Chicago, IL</option>
+                    </select>
+                </div>
+            </div>
+                <div class="message">
+                    <label for="message">Message</label>
+                    <textarea class ='text-area' rows="5" name="message" id="message" placeholder="Leave us a message." required="required"></textarea>
+                </div>
+                <input type="hidden" name="_subject" id="email-subject" value="Department Contact Form Submission">
+        </fieldset>
+        <input class='form-button' type="submit" value="Send">
+    </form>
+</div>
