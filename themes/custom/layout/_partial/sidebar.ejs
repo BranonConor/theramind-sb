@@ -2,9 +2,13 @@
     <div class="sidebar-module">
         <h4>Recent</h4>
         <ul class="list-styled">
-            <% let news = site.posts %>
+            <% let posts = site.posts; %>
+            <% let news = []; %>
+            <% for (let i = posts.length-1; i > posts.length-3; i--) { %>
+                <% news.push(posts.data[i]); %>
+            <% } %>
             <% news.forEach(function(item) { %>
-                <% if (item.type === 'news') { %>
+                <% if (item.type === 'blog') { %>
                     <li><a href="<%- config.root %><%- item.path %>"><%- item.title %></a></li>
                 <% } %>
             <% }); %>

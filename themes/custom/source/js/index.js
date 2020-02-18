@@ -23,7 +23,6 @@ const showMobileMenu = () => {
 }
 
 let pointer = 1;
-console.log(pointer);
 const moveLeft = () => {
     if(pointer > 0) {
         pointer--;
@@ -66,12 +65,10 @@ hamburger.addEventListener('click', function() {
 if(leftArrow || rightArrow) {
     leftArrow.addEventListener('click', function () {
         moveLeft();
-        console.log(pointer);
         renderNewQuote();
     });
     rightArrow.addEventListener('click', function () {
         moveRight();
-        console.log(pointer);
         renderNewQuote();
     });
 }

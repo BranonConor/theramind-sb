@@ -549,6 +549,7 @@ label {
     background-color: #eee;
 }
 .sidebar-module {
+    width: 225px;
     padding: 0 50px;
 }
 .sidebar-module h4 {
@@ -710,6 +711,7 @@ label {
         display: flex;
         flex-direction: row-reverse;
         justify-content: flex-end;
+        background-color: #eee;
     }
     .navbar {
         display: none;
@@ -864,10 +866,26 @@ label {
     .about-strip {
         padding: 75px 20px;
     }
+    /* Contact Form */
+    .form-strip {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .form-strip h2 {
+        width: 90%;
+        margin: 0;
+    }
     /* Sidebar */
-    .sidebar-module {
-        width: 33%;
+    .sidebar {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         font-size: 0.8rem;
+    }
+    .sidebar-module {
+        width: 100%;
     }
 }
 @media only screen and (max-width: 340px) {
