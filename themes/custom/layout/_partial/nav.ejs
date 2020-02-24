@@ -1,27 +1,37 @@
 <!-- NAVIGATION -->
 <div class="nav">
-    <div class="brand">
-        
-    </div>
-    <div class="navbar">
-        <!-- Pull each menu item in from the local _config.yml file -->
-        <% for (var i in theme.menu) { %>
-            <a class='navLink' href='<%- url_for(theme.menu[i]) %>'><%- i %></a>
-        <% } %>
-    </div>
-    <div class="social">
-        <a href="#" target='_blank'></a>
-        <a href="#" target='_blank'></a>
-        <a href="#" target='_blank'></a>
-    </div>
-    <div class='hamburger' onclick='hamburgerClick(this)'>
-        <div class='bar1'></div>
-        <div class='bar2'></div>
-        <div class='bar3'></div>
+    <div class="nav-top">
+        <div class="brand">
+            <img src="/images/theramind-logo.png" alt="theramind-logo">
+        </div>
+        <!-- If we want a simple, no-text logo this is it
+            <div class="brand-mobile">
+            <img src="main-logo-simple.png" alt="theramind-logo">
+            </div> 
+        -->
+        <div class="navbar-wrapper">
+            <div class="call-now">
+                <p><i class="fas fa-phone-volume"></i>Call now for a FREE consultation! <span>+1 (805) 845-4455</span></p>
+            </div>
+            <div class="navbar">
+                <!-- Pull each menu item in from the local _config.yml file -->
+                <% for (var i in theme.menu) { %>
+                    <a class='nav-link' href='<%- url_for(theme.menu[i]) %>'><%- i %></a>
+                <% } %>
+            </div>
+            <div class='hamburger' onclick='hamburgerClick(this)'>
+                <div class='bar1'></div>
+                <div class='bar2'></div>
+                <div class='bar3'></div>
+            </div>
+        </div>
     </div>
     <div class='nav-mobile'>
         <% for (var i in theme.menu) { %>
-            <a class='mobileLink display-none' href='<%- url_for(theme.menu[i]) %>'><%- i %></a>
+            <a class='mobile-link' href='<%- url_for(theme.menu[i]) %>'><%- i %></a>
         <% } %>
+        <div class="call-now-mobile">
+            <p><i class="fas fa-phone-volume"></i>Call now for a FREE consultation! <span>+1 (805) 845-4455</span></p>
+        </div>
     </div>
 </div>
