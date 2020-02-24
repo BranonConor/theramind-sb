@@ -4,26 +4,16 @@
 <!-- Head Tags -->
 <%- partial('_partial/head') %>
 <body>
-    <!-- Top Strip -->
-    <%- partial('_partial/top-strip') %>
     <!-- Navigation -->
     <%- partial('_partial/nav') %>
             <!-- MAIN CONTENT -->
-            <!-- 
-            pulls in index.ejs, which applies page format 
-            and pulls in page-full.ejs to bring in content
-            -->
             <%- body %>
             <!-- Homepage Content (If it's the Homepage) -->
             <% if (is_home()) { %>
                 <%- partial('_partial/homepage') %>
             <% } %>
-            <!-- If it's the Projects Page, render projects.ejs-->
-            <% if (page.layout == 'archive' && page.type == 'project') { %>
-                <%- partial('_partial/projects') %>
-            <% } %>
             <!-- If it's the Blog Page, render blog.ejs-->
-            <% if (page.layout == 'archive' && page.type == 'blog') { %>
+            <% if (page.type == 'about') { %>
                 <%- partial('_partial/blog') %>
             <% } %>
     <%- partial('_partial/contact-form') %>

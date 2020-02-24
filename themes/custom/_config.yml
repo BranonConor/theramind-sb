@@ -1,8 +1,9 @@
 # Header
 menu: 
   Home: /
+  Services: /
+  Treated Conditions: /
   About: /about
-  News: /news
   Contact: /contact
 
 # Read More Text
