@@ -1,7 +1,7 @@
 ---
-title: news
+title: News
 date: 2020-02-07 10:51:19
-layout: archive
-type: blog
+layout: blog
+type: news
 ---
-This is the news page for all new articles and blog posts!
+Welcome to our news page. Stay up to date on research articles and center updates! 

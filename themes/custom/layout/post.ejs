@@ -1,1 +1,3 @@
-<%- partial('_partial/article-full', {item: page}) %>
+<% if (post.type === 'blog') { %>
+    <%- partial('_partial/article-full', {item: page}) %>   
+<% } %>

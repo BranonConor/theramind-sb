@@ -218,9 +218,6 @@ button:hover::before {
     cursor: pointer;
     outline: none;
 }
-.thin-strip button:hover {
-    transform: scale(1.1);
-}
 
 /* ----------- ABOUT STRIP ------------- */
 .about-strip {
@@ -664,9 +661,10 @@ label {
 }
 .post {
     border: 1px solid black;
+    border-radius: 10px;
     padding: 20px;
     width: 335px;
-    height: 300px;
+    min-height: 300px;
     margin: 20px;
 }
 .post a {
@@ -685,9 +683,59 @@ label {
 }
 .post-full img {
     max-width: 100%;
-    height:auto;
+    height: auto;
 }
-
+/* ---------------- POST COMPONENTS ----------- */
+.component-post {
+    padding: 50px 20%;
+}
+.component-title {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.component-post a {
+    -webkit-appearance: none;
+    width: 210px;
+    height: 35px;
+    margin: 20px;
+    background: var(--main-accent-color);
+    color: white;
+    font-weight: bolder;
+    font-size: 0.8rem;
+    transition: 0.4s ease all;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+}
+.component-post a::after {
+    display: none;
+}
+.component-post a::before {
+    content: '→';
+    position: absolute;
+    left: 50%;
+    width: 0;
+    opacity: 0;
+    transition: 0.3s ease all;
+}
+.component-post a:hover::before {
+    width: 60px;
+    transform: translateX(20px);
+    font-size: 0.8rem;
+    opacity: 1;
+}
+/* ---------------- ABOUT PAGE COMPONENTS ---------------- */
+.news-strip {
+    padding: 50px 20%;
+}
 
 /* ---------------- MEDIA QUERIES ----------------- */
 @media only screen and (max-width: 1200px) {
@@ -1005,6 +1053,20 @@ label {
     }
     .name, .email, .phone, .location, .text-area {
         margin: 0;
+    }
+
+    /* POSTS */
+    .post-full {
+        padding: 20px 10%;
+    }
+    /* SIDEBAR */
+    .sidebar {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+    .sidebar-module {
+        width: 100%;
+        padding: 0;
     }
 }
 @media only screen and (max-width: 340px) {
