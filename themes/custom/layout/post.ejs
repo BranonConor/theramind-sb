@@ -1,1 +1,7 @@
-<%- partial('_partial/article-full', {item: page}) %>
+<% if (page.type === 'blog') { %>
+    <%- partial('_partial/page-full', {item: page}) %> 
+    <div class="button-wrapper">
+        <a href="<% config.root %>/news" class='button'>Back To Blog</a>  
+    </div>
+    <%- partial('_partial/sidebar') %>
+<% } %>

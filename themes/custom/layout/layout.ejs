@@ -12,10 +12,15 @@
             <% if (is_home()) { %>
                 <%- partial('_partial/homepage') %>
             <% } %>
-            <!-- If it's the Blog Page, render blog.ejs-->
+            <!-- If it's the About Page, render the following components -->
             <% if (page.type == 'about') { %>
+                <%- partial('_partial/about') %>
+            <% } %>
+            <% if (page.type == 'news') { %>
                 <%- partial('_partial/blog') %>
             <% } %>
+
+
     <%- partial('_partial/contact-form') %>
     <%- partial('_partial/footer') %>
     <!-- Scripts-->

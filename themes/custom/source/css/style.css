@@ -46,22 +46,50 @@ a:hover::after {
     width: 100%;
     transform: translateX(50%);
     transition: 0.25s ease all;
-    opacity: 1;
+    opacity: 1; 
 }
-button::before {
+.button {
+    -webkit-appearance: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 210px;
+    height: 35px;
+    margin: 20px;
+    background: var(--main-accent-color);
+    color: white;
+    font-weight: bolder;
+    font-size: 0.8rem;
+    transition: 0.4s ease all;
+    border: 1px solid var(--main-accent-color);
+    border-radius: 7px;
+    cursor: pointer;
+    outline: none;
+}
+.button::before {
     content: '→';
     position: absolute;
     left: 50%;
     width: 0;
     opacity: 0;
     transition: 0.3s ease all;
+    color: black;
 }
-button:hover::before {
+.button:hover::before {
     width: 60px;
-    transform: translateX(20px);
+    transform: translateX(55px);
     font-size: 0.8rem;
     opacity: 1;
 }
+.button:hover {
+    color: black;
+    background: none;
+    border: 1px solid black;
+}
+.button::after {
+    display: none;
+}
+
 /* --------------- NAVIGATION ---------------- */
 .nav {
     display: flex;
@@ -203,25 +231,13 @@ button:hover::before {
 .thin-strip hr {
     width: 10%;
 }
-.thin-strip button {
-    -webkit-appearance: none;
-    width: 210px;
-    height: 35px;
-    margin: 20px;
-    background: var(--main-accent-color);
+.thin-strip .button:hover {
     color: white;
-    font-weight: bolder;
-    font-size: 0.8rem;
-    transition: 0.4s ease all;
-    border: none;
-    border-radius: 7px;
-    cursor: pointer;
-    outline: none;
+    border: 1px solid white;
 }
-.thin-strip button:hover {
-    transform: scale(1.1);
+.thin-strip .button:hover::before {
+    color: white;
 }
-
 /* ----------- ABOUT STRIP ------------- */
 .about-strip {
     background: #eee;
@@ -505,22 +521,15 @@ label {
 .message label, input {
     width: 100%;
 }
-.form-button {
-    -webkit-appearance: none;
-    width: 210px;
-    height: 35px;
-    margin: 20px;
-    background: var(--main-accent-color);
-    color: white;
-    font-weight: bolder;
-    font-size: 0.8rem;
-    transition: 0.4s ease all;
-    border-radius: 7px;
-    cursor: pointer;
+form .button {
+    width: 210px; 
 }
-.form-button:hover {
-    transform: scale(1.1);
+form .button:hover {
+    border: 1px solid black;
+    color: black;
+    background: none;
 }
+
 
 
 
@@ -660,22 +669,22 @@ label {
     padding: 50px 20%;
 }
 .post-full a {
-    color: orange;
+    color: var(--main-accent-color);
 }
 .post {
     border: 1px solid black;
+    background: #f6f6f6;
+    border-radius: 10px;
     padding: 20px;
     width: 335px;
-    height: 300px;
+    min-height: 300px;
     margin: 20px;
 }
 .post a {
-    color: orange;
+    color: var(--main-accent-color);
 }
 .post-title {
     text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 3px;
 }
 .post-title a:hover {
     color: black;
@@ -685,9 +694,35 @@ label {
 }
 .post-full img {
     max-width: 100%;
-    height:auto;
+    height: auto;
 }
-
+/* ---------------- POST COMPONENTS ----------- */
+.component-post {
+    padding: 50px 20%;
+}
+.component-title {
+    text-align: center;
+}
+.button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* ---------------- ABOUT PAGE COMPONENTS ---------------- */
+.news-strip {
+    padding: 50px 20%;
+    background: #4b4b4b;
+    color: white;
+}
+.news-strip .button {
+    color: white;
+}
+.news-strip .button:hover {
+    border: 1px solid white;
+}
+.news-strip .button:hover::before {
+    color: white;
+}
 
 /* ---------------- MEDIA QUERIES ----------------- */
 @media only screen and (max-width: 1200px) {
@@ -1005,6 +1040,24 @@ label {
     }
     .name, .email, .phone, .location, .text-area {
         margin: 0;
+    }
+
+    /* POSTS */
+    .post-full {
+        padding: 20px 10%;
+    }
+    /* COMPONENTS */
+    .component-post {
+        padding: 20px 10%;
+    }
+    /* SIDEBAR */
+    .sidebar {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+    .sidebar-module {
+        width: 100%;
+        padding: 0;
     }
 }
 @media only screen and (max-width: 340px) {
