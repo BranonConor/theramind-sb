@@ -9,7 +9,7 @@ excerpt: 'The numbers are in! Check out a recent study we did about Active Duty 
 ## The Numbers are In! 
 We recently compiled statistics for a handful of patients treated from Vandenberg Airforce Base. The results were incredible - see it for yourself!
 
-![Study Statistics](/images/post-images/bdi.png)
+![Study Statistics](/images/uploads/bdi.png)
 
 ## Limitations
 There are, of course, some limitations to consider. 
