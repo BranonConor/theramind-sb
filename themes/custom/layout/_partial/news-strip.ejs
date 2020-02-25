@@ -3,7 +3,7 @@
     <% let posts = site.posts %>
     <% posts.forEach(function(item) { %>
         <% if (item.title === 'News & Blog') { %>
-            <h2 class='post-title'><%- item.title %></h2>
+            <h2 class='component-title'><%- item.title %></h2>
             <%- item.content %>
         <% } %>
     <% }) %>
@@ -12,7 +12,7 @@
         <% let pages = site.pages %>
         <% pages.forEach(function(item) { %>
             <% if (item.type === 'news') { %>
-                <a href="<% config.root %>/news">Go to Blog Page</a>
+                <a href="<% config.root %>/news" class='button'>Go to Blog Page</a>
             <% } %>
         <% }) %>
     </div>
