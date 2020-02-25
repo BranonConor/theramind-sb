@@ -21,6 +21,7 @@ This site is a bit more complex than the average blog site, as it allows for cop
                 --> about-strip.ejs
                 --> conditions-strip.ejs
                 --> testimonials-strip.ejs
+                        --> testimonials.md [post] (loop through posts with type = 'testimonial')
                 --> insurance-strip.ejs
             --> contact-strip.ejs
             --> footer.ejs
