@@ -34,7 +34,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Draft", name: "draft", widget: "boolean", default: true}
-      - {label: "Type", name: "type", widget: "hidden", default: "blog"}
+      - {label: "Type", name: "type", widget: "hidden", default: "component"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
