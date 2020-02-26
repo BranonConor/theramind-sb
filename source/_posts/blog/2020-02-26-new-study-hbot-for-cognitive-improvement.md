@@ -2,7 +2,8 @@
 layout: blog
 draft: false
 type: blog
-title: 'New Study: HBOT for Cognitive Improvement'
+excerpt: 'Check out an awesome new study about HBOT improving cardiovascular health. '
+title: 'New Study: HBOT for Cardiac Improvement'
 date: 2020-02-25T20:46:00.000Z
 categories: HBOT
 tags: 'hbot, cognition'
