@@ -1,6 +1,6 @@
 ---
 layout: blog
-draft: true
+draft: false
 type: blog
 title: 'New Study: HBOT for Cognitive Improvement'
 date: 2020-02-25T20:46:00.000Z
