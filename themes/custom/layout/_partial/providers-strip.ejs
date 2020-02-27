@@ -1,0 +1,19 @@
+<div class="component-post providers-strip">
+    <!-- Display content from the News Comopnent Post -->
+    <% let posts = site.posts %>
+    <% posts.forEach(function(item) { %>
+        <% if (item.title === 'Providers & Staff') { %>
+            <h2 class='component-title'><%- item.title %></h2>
+            <%- item.content %>
+        <% } %>
+    <% }) %>
+    <!-- Link to the Providers Page / index.md-->
+    <div class="button-wrapper">
+        <% let pages = site.pages %>
+        <% pages.forEach(function(item) { %>
+            <% if (item.type === 'providers') { %>
+                <a href="<% config.root %>/providers" class='button'>Go to Providers Page</a>
+            <% } %>
+        <% }) %>
+    </div>
+</div>
