@@ -791,6 +791,23 @@ form .button:hover {
 .news-strip .button:hover::before {
     color: white;
 }
+/* -------------- SERVICES PAGE COMPONENTS ------------- */
+.services-strip {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px 10%;
+}
+.service-card {
+    width: 310px;
+    height: 200px;
+    background: #eee;
+    text-align: center;
+    margin: 5px;
+    padding: 10px;
+}
 
 /* ---------------- MEDIA QUERIES ----------------- */
 @media only screen and (max-width: 1200px) {

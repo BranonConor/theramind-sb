@@ -20,10 +20,15 @@
                 <% if (page.type == 'news') { %>
                     <%- partial('_partial/blog') %>
                 <% } %>
-            <!-- If it's the Treated Conditions Page, render conditions.ejs -->
+            <!-- If it's the Treated Conditions Page, render conditions-page.ejs -->
             <% if (page.type == 'conditions') { %>
                 <%- partial('_partial/conditions/conditions-page') %>
             <% } %>               
+            <!-- If it's the Services Page, render services-page.ejs -->
+            <% if (page.type == 'services') { %>
+                <%- partial('_partial/services/services-page') %>
+            <% } %>               
+             
 
     <%- partial('_partial/contact-form') %>
     <%- partial('_partial/footer') %>
