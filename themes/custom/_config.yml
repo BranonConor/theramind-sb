@@ -1,15 +1,15 @@
 # Header
 menu: 
   Home: /
-  Services: /
+  Services: /services
   Treated Conditions: /conditions
   About: /about
   Contact: /contact
 
 services:
-  TMS Therapy: /conditions/tms-therapy
-  HBOT: /conditions/hbot
-  Diagnostics: /conditions/advanced-diagnostics
+  TMS Therapy: /services/tms-therapy
+  HBOT: /services/hbot
+  Diagnostics: /services/advanced-diagnostics
 
 conditions:
   Depression: /conditions/depression
