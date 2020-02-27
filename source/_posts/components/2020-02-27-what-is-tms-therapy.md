@@ -9,7 +9,7 @@ TMS is a non-invasive, safe and effective treatment option for people suffering 
 
 TMS has also been used safely and effectively used for several other conditions, including: Generalized Anxiety Disorder (GAD); Post-Traumatic Stress Disorder (PTSD); Chronic Pain (including Fibromyalgia); Obsessive Compulsive Disorder (“OCD”); Tinnitus; and other mood and neurological disorders. Please refer to our Treated Disorders page for more information. The TheraMind Center of Los Angeles successfully treats Major Depressive Disorder and OCD sufferers using the Brainsway TMS system, including the new FDA-approved Brainsway OCD TMS therapy system.
 
-## A GENERAL TMS TREATMENT COURSE AND SIDE EFFECTS
+#### A GENERAL TMS TREATMENT COURSE AND SIDE EFFECTS
 
 TMS treatment is an outpatient procedure and requires no anesthesia or sedation. A typical depression treatment course consists of at least thirty treatments, usually five treatments a week for six weeks, although the treatment schedule can vary based on patient response. The procedure typically lasts about 19 minutes during which time the patients are awake, alert and comfortable. Our TMS Specialists are present throughout the treatment and interact with the patient while continuously monitoring the treatment to ensure the patient’s comfort and the maximum efficacy of the treatment.
 
