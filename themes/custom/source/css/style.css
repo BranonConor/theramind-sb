@@ -25,7 +25,11 @@ a {
     text-decoration: none;
     color: black;
     position: relative;
-    transition: 0.2s ease all;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 a::after {
     content: '';
@@ -37,7 +41,11 @@ a::after {
     left: -50%;
     top: 94%;
     opacity: 0;
-    transition: 0.5s ease all;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 a:hover {
     color: var(--main-accent-color);
@@ -45,7 +53,11 @@ a:hover {
 a:hover::after {
     width: 100%;
     transform: translateX(50%);
-    transition: 0.25s ease all;
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    -ms-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
     opacity: 1; 
 }
 .button {
@@ -807,7 +819,16 @@ form .button:hover {
     text-align: center;
     margin: 5px;
     padding: 10px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: 0.3s ease all;
 }
+.service-card:hover {
+    transform: translateY(-7px);
+}
+
 
 /* ---------------- MEDIA QUERIES ----------------- */
 @media only screen and (max-width: 1200px) {
