@@ -830,7 +830,7 @@ form .button:hover {
 }
 /* -------------- TMS PAGE COMPONENTS --------- */
 .tms-strip {
-    padding: 0 20%;
+    padding: 0 20% 50px 20%;
 }
 
 
