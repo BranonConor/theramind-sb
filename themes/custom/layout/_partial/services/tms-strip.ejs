@@ -1,0 +1,10 @@
+<div class="component-post tms-strip">
+    <!-- Bring in TMS component post -->
+    <% let posts = site.posts %>
+    <% posts.forEach(function(item) { %>
+        <% if (item.title === 'What is TMS Therapy?' && item.type === 'component') { %>
+            <h2 class='component-title'><%- item.title %></h2>
+            <%- item.content %>
+        <% } %>
+    <% }) %>
+</div>

@@ -780,7 +780,7 @@ form .button:hover {
 .component-post {
     padding: 50px 20%;
 }
-.component-title {
+.component-post h1, .component-post h2, .component-post h3, .component-post h4, .component-post h5, .component-post h6 {
     text-align: center;
 }
 .button-wrapper {
@@ -827,6 +827,10 @@ form .button:hover {
 }
 .service-card:hover {
     transform: translateY(-7px);
+}
+/* -------------- TMS PAGE COMPONENTS --------- */
+.tms-strip {
+    padding: 0 20%;
 }
 
 
