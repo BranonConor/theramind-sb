@@ -12,7 +12,7 @@
         <% let pages = site.pages %>
         <% pages.forEach(function(item) { %>
             <% if (item.type === 'providers') { %>
-                <a href="<% config.root %>/providers" class='button'>See Providers</a>
+                <a href="<%- url_for(theme.about.Providers) %>" class='button'>See Providers</a>
             <% } %>
         <% }) %>
     </div>
