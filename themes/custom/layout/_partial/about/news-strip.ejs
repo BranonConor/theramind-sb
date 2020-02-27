@@ -3,7 +3,7 @@
     <% let posts = site.posts %>
     <% posts.forEach(function(item) { %>
         <% if (item.title === 'News & Blog') { %>
-            <h2 class='component-title'><%- item.title %></h2>
+            <h3 class='component-title'><%- item.title %></h3>
             <%- item.content %>
         <% } %>
     <% }) %>
