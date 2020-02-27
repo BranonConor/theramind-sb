@@ -14,12 +14,16 @@
             <% } %>
             <!-- If it's the About Page, render the following components -->
             <% if (page.type == 'about') { %>
-                <%- partial('_partial/about') %>
+                <%- partial('_partial/about/about-page') %>
             <% } %>
-            <% if (page.type == 'news') { %>
-                <%- partial('_partial/blog') %>
-            <% } %>
-
+                <!-- If it's the News Page, render the blog -->
+                <% if (page.type == 'news') { %>
+                    <%- partial('_partial/blog') %>
+                <% } %>
+             <!-- If it's the Treated Conditions Page, render conditions.ejs -->
+             <% if (page.type == 'conditions') { %>
+                <%- partial('_partial/conditions/conditions-page') %>
+            <% } %>           
 
     <%- partial('_partial/contact-form') %>
     <%- partial('_partial/footer') %>

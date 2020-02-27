@@ -2,9 +2,27 @@
 menu: 
   Home: /
   Services: /
-  Treated Conditions: /
+  Treated Conditions: /conditions
   About: /about
   Contact: /contact
+
+services:
+  TMS Therapy: /conditions/tms-therapy
+  HBOT: /conditions/hbot
+  Diagnostics: /conditions/advanced-diagnostics
+
+conditions:
+  Depression: /conditions/depression
+  Anxiety: /conditions/anxiety
+  PTSD: /conditions/ptsd
+  OCD: /conditions/ocd
+  Bipolar: /conditions/bipolar
+  Chronic Pain: /conditions/chronic-pain
+  Tinnitus: /conditions/tinnitus
+
+about:
+  Providers: /about/providers
+  News: /about/news
 
 # Read More Text
 excerpt_link: Read More

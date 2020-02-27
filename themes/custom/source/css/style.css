@@ -35,7 +35,7 @@ a::after {
     transition: width .6s;
     position: absolute;
     left: -50%;
-    top: 90%;
+    top: 94%;
     opacity: 0;
     transition: 0.5s ease all;
 }
@@ -60,7 +60,11 @@ a:hover::after {
     color: white;
     font-weight: bolder;
     font-size: 0.8rem;
-    transition: 0.4s ease all;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
     border: 1px solid var(--main-accent-color);
     border-radius: 7px;
     cursor: pointer;
@@ -192,7 +196,11 @@ a:hover::after {
     padding: 0 10px 0 10px;
     transform: rotate(-20deg) translateY(5px);
     font-size: 1.1rem;
-    transition: 0.4s ease all;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
 }
 .nav-link {
     padding: 0 10px 0 10px;
@@ -206,6 +214,43 @@ a:hover::after {
     transition: 0.4s ease-in;
     overflow: hidden;
 }
+/* Dropdown Styling */
+.menu-link-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+.dropdown {
+    width: 150px;
+    max-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    overflow: hidden;
+    position: absolute;
+    top: 100%;
+    z-index: 2;
+    background: white;
+    border-radius: 5px;
+}
+.dropdown .nav-link {
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+}
+.menu-link-wrapper:hover .dropdown {
+    max-height: 300px;
+}
+
+
 
 /* ------------ HERO STRIP -------------- */
 .hero-strip {
@@ -372,7 +417,11 @@ a:hover::after {
 .testimonial-strip i {
     color: white;
     padding: 100px;
-    transition: 0.4 ease all;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
 }
 .testimonial-strip i:hover {
     color: var(--main-accent-color);
@@ -432,7 +481,11 @@ a:hover::after {
     border-radius: 5px;
     width: 125px;
     height: 80px;
-    transition: 0.3s ease all;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
     background-color: white;
 }
 .insurance-carousel img:hover {
@@ -553,7 +606,11 @@ form .button:hover {
 }
 .footer a {
     color: #bbb;
-    transition: 0.4s ease all;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
     width: 100%;
 }
 .footer a:hover {
@@ -601,7 +658,11 @@ form .button:hover {
 .map {
     width: 100%;
     height: 100%;
-    transition: 0.4s ease all;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
 }
 .map {
     width: 100%;
