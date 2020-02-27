@@ -17,6 +17,7 @@ conditions:
   PTSD: /conditions/ptsd
   OCD: /conditions/ocd
   Bipolar: /conditions/bipolar
+  Post-Stroke: /conditions/post-stroke
   Chronic Pain: /conditions/chronic-pain
   Tinnitus: /conditions/tinnitus
 
