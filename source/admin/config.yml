@@ -42,9 +42,33 @@ collections:
   - name: "top-level-pages"
     label: "Top-Level Pages"
     files:
+      - label: "Services Page"
+        name: "services"
+        file: "source/services/index.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: markdown}
+      - label: "Conditions Treated Page"
+        name: "conditions"
+        file: "source/conditions/index.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: markdown}
+      - label: "Services Page"
+        name: "services"
+        file: "source/services/index.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: markdown}
       - label: "About Page"
         name: "about"
         file: "source/about/index.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: markdown}
+      - label: "Contact Page"
+        name: "contact"
+        file: "source/contact/index.md"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Intro, name: intro, widget: markdown}
