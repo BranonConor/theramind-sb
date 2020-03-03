@@ -47,7 +47,7 @@ collections:
         file: "themes/custom/_config.yml"
         fields:
           - {label: Title, name: title, widget: string}
-          - {label: "Body", name: "body", widget: "yaml"}
+          - {label: "Body", name: "body", widget: "markdown"}
   - name: "top-level-pages"
     label: "Top-Level Pages"
     files:
