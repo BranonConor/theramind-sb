@@ -41,7 +41,6 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "top-level-pages"
     label: "Top-Level Pages"
-    create: true # Allow users to create new documents in this collection
     files:
       - label: "Services Page"
         name: "services"
