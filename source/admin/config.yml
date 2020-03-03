@@ -41,41 +41,35 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "top-level-pages"
     label: "Top-Level Pages"
+    create: true # Allow users to create new documents in this collection
     files:
       - label: "Services Page"
         name: "services"
         file: "source/services/index.md"
         fields:
           - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
+          - {label: "Body", name: "body", widget: "markdown"}
       - label: "Conditions Treated Page"
         name: "conditions"
         file: "source/conditions/index.md"
         fields:
           - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
+          - {label: "Body", name: "body", widget: "markdown"}
       - label: "Services Page"
         name: "services"
         file: "source/services/index.md"
         fields:
           - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
+          - {label: "Body", name: "body", widget: "markdown"}
       - label: "About Page"
         name: "about"
         file: "source/about/index.md"
         fields:
           - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
-          - label: Team
-            name: team
-            widget: list
-            fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Position, name: position, widget: string}
-              - {label: Photo, name: photo, widget: image}
+          - {label: "Body", name: "body", widget: "markdown"} 
       - label: "Contact Page"
         name: "contact"
         file: "source/contact/index.md"
         fields:
           - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
+          - {label: "Body", name: "body", widget: "markdown"}
