@@ -150,6 +150,9 @@ a:hover::after {
     display: flex;
     align-items: center;
 }
+.brand a::after {
+    display: none;
+}
 .brand img {
     width: 230px;
     height: 100px;
