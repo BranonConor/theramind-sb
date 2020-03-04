@@ -1,28 +1,8 @@
 <!-- NOTE: layout.ejs passes in "body", which is this document according to Hexo -->
 <!-- This page should therefore contain home-page content, generally -->
-        <!-- Homepage Content (If it's the Homepage) -->
-        <% if (is_home()) { %>
-            <%- partial('_partial/homepage') %>
-        <% } %>
-    <!-- If it's the About Page, render the following components -->
-        <% if (page.type == 'about') { %>
-            <%- partial('_partial/about/about-page') %>
-        <% } %>
-        <!-- If it's the News Page, render the blog -->
-            <% if (page.type == 'news') { %>
-                <%- partial('_partial/blog') %>
-            <% } %>
-    <!-- If it's the Treated Conditions Page, render conditions-page.ejs -->
-        <% if (page.type == 'conditions') { %>
-            <%- partial('_partial/conditions/conditions-page') %>
-        <% } %>               
-    <!-- If it's the Services Page, render services-page.ejs -->
-        <% if (page.type == 'services') { %>
-            <%- partial('_partial/services/services-page') %>
-        <% } %>               
-        <!-- If it's the TMS Page, render tms-strip.ejs -->
-            <% if (page.type == 'tms-therapy') { %>
-                <%- partial('_partial/services/tms-strip') %>
-            <% } %>               
-    <!-- add pagination partial -->
-    <%- partial('_partial/pagination') %>
+<!-- Homepage Content (If it's the Homepage) -->
+<% if (is_home()) { %>
+    <%- partial('_partial/homepage') %>
+<% } %>              
+<!-- add pagination partial -->
+<%- partial('_partial/pagination') %>
