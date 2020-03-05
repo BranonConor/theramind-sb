@@ -255,6 +255,9 @@ a:hover::after {
     z-index: 2;
     background: white;
     border-radius: 5px;
+    -webkit-box-shadow: 1px 15px 28px 0px rgba(0,0,0,0.49);
+    -moz-box-shadow: 1px 15px 28px 0px rgba(0,0,0,0.49);
+    box-shadow: 1px 15px 28px 0px rgba(0,0,0,0.49);
 }
 .dropdown .nav-link {
     text-align: center;
@@ -263,6 +266,14 @@ a:hover::after {
 }
 .menu-link-wrapper:hover .dropdown {
     max-height: 300px;
+}
+.menu-link-wrapper:hover .nav-link i {
+    transform: translateX(2px) translateY(6px);
+}
+.nav-link i {
+    transform: translateX(2px) translateY(2px);
+    color: var(--main-accent-color);
+    transition: 0.4s ease all;
 }
 
 
