@@ -81,9 +81,31 @@ collections:
         fields:
           - {label: Title, name: title, widget: string}
           - {label: "Body", name: "body", widget: "markdown"}
-  - name: "pages" # Used in routes, e.g., /admin/collections/blog
-    label: "Pages" # Used in the UI
-    folder: "source/" # The path to the folder where the documents are stored
+  - name: "services-pages" # Used in routes, e.g., /admin/collections/blog
+    label: "Services Pages" # Used in the UI
+    folder: "source/services/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "index" # Filename template, e.g., YYYY-MM-DD-title.md
+    path: '{{title}}/{{slug}}'
+    fields: # The fields for each document, usually in front matter
+      - {label: "Draft", name: "draft", widget: "boolean", default: true}
+      - {label: "Type", name: "type", widget: "hidden", default: "component"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "conditions-pages" # Used in routes, e.g., /admin/collections/blog
+    label: "Conditions Pages" # Used in the UI
+    folder: "source/conditions/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "index" # Filename template, e.g., YYYY-MM-DD-title.md
+    path: '{{title}}/{{slug}}'
+    fields: # The fields for each document, usually in front matter
+      - {label: "Draft", name: "draft", widget: "boolean", default: true}
+      - {label: "Type", name: "type", widget: "hidden", default: "component"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "about-pages" # Used in routes, e.g., /admin/collections/blog
+    label: "About Pages" # Used in the UI
+    folder: "source/about/" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "index" # Filename template, e.g., YYYY-MM-DD-title.md
     path: '{{title}}/{{slug}}'
