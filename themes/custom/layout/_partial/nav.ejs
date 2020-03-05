@@ -21,7 +21,7 @@
                      <!-- If it's the services menu link, render that link + submenu links -->
                      <% if (i === 'Services') { %>
                         <div class="menu-link-wrapper">
-                            <a class='nav-link' href='<%- url_for(theme.menu[i]) %>'><%- i %></a>
+                            <a class='nav-link' href='<%- url_for(theme.menu[i]) %>'><%- i %><i class="fas fa-angle-down"></i></a>
                             <div class="dropdown">
                                 <% for (var j in theme.services) { %>
                                     <a class='nav-link' href='<%- url_for(theme.services[j]) %>'><%- j %></a>
@@ -30,7 +30,7 @@
                         </div>
                     <% } else if (i === 'Treated Conditions') { %>
                         <div class="menu-link-wrapper">
-                            <a class='nav-link' href='<%- url_for(theme.menu[i]) %>'><%- i %></a>
+                            <a class='nav-link' href='<%- url_for(theme.menu[i]) %>'><%- i %><i class="fas fa-angle-down"></i></a>
                             <div class="dropdown">
                                 <% for (var j in theme.conditions) { %>
                                     <a class='nav-link' href='<%- url_for(theme.conditions[j]) %>'><%- j %></a>
@@ -39,7 +39,7 @@
                         </div>
                     <% } else if (i === 'About') { %>
                         <div class="menu-link-wrapper">
-                            <a class='nav-link' href='<%- url_for(theme.menu[i]) %>'><%- i %></a>
+                            <a class='nav-link' href='<%- url_for(theme.menu[i]) %>'><%- i %><i class="fas fa-angle-down"></i></a>
                             <div class="dropdown">
                                 <% for (var j in theme.about) { %>
                                     <a class='nav-link' href='<%- url_for(theme.about[j]) %>'><%- j %></a>
