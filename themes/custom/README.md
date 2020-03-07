@@ -12,6 +12,17 @@ Posting requires a few considerations given the development of this theme.
 - A post type of "post" will go through post.ejs, which renders article-full.ejs.
 - A post type of "page" will go through page.ejs, which renders page-full.ejs. 
 
+
+# PAGE TREE STRUCTURE AND CMS UI CONFIGURATION
+- Nav menu now programmed to be way smarter! 
+- It now takes page information from the site data vs. the config.yml file in Hexo, which allows Netlify CMS to be configured to speak its language.
+
+Two collections added to the CMS UI: 
+- Top Level Pages: has new 'children' boolean field, which will slap a dropdown icon in if true, and will loop through to find children pages that have a 'parent' field set to this page
+- Lower Level Pages : has new 'parent' string field, which will be used to link this child page to its parent in the navigation
+- Both pages also now use 'menulabel' fields, which determine what their name will be in the rendered navigation menu. This allows you to change the title of the page that is rendered to that page, without affecting its place in the page tree. 
+
+
 # SITE MAP
 This site is a bit more complex than the average blog site, as it allows for copy-editing across almost the entire site vs. only the blog posts. Here's a summary of the site map:
 * HOME
