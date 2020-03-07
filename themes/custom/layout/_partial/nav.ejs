@@ -19,55 +19,27 @@
                 <div class="menu-link-wrapper">
                     <a class='nav-link' href='<%- config.root %>'>Home</a>
                 </div>
+                <!-- Loop through all pages -->
                 <% for (let i = 0; i < site.pages.data.length; i++) { %>
                     <% let thisPage = site.pages.data %>
+                    <!-- Print top level pages -->
                     <% if (thisPage[i].type === 'top-level') { %>
                         <div class="menu-link-wrapper">
+                            <!-- If the top-level page has child pages, give it a dropdown icon -->
                             <% if (thisPage[i].children === true) { %>
                                 <a class='nav-link' href='<%- config.root %><%- thisPage[i].path %>'><%- thisPage[i].menulabel %><i class="fas fa-angle-down"></i></a>
+                                <div class="dropdown">
                                 <!-- If there's childern pages, loop through all children and pick the ones that have parent = this page's title --> 
-                                <% if (thisPage[i].type === 'lower-level') { %>
-                                    <%- console.log(thisPage[i].title) %>
-                                    <%- console.log(url_for(thisPage[i])) %>
-                                <% } %>
+                                    <% for (let j = 0; j < site.pages.data.length; j++) { %>
+                                        <% if ((thisPage[j].type === 'lower-level') && (thisPage[j].parent === thisPage[i].menulabel)) { %>
+                                            <a class='nav-link' href='<%- config.root %><%- thisPage[j].path %>'><%- thisPage[j].menulabel %></a>
+                                        <% } %>
+                                    <% } %>
+                                </div>
                             <% } else { %>
                                 <a class='nav-link' href='<%- config.root %><%- thisPage[i].path %>'><%- thisPage[i].menulabel %></a>
                             <% } %>
                         </div>
-                    <% } %>
-                <% } %>
-                <!-- Pull each menu item in from the local _config.yml file -->
-                <% for (var i in theme.menu) { %>
-                     <!-- If it's the services menu link, render that link + submenu links -->
-                     <% if (i === 'Services') { %>
-                        <div class="menu-link-wrapper">
-                            <a class='nav-link' href='<%- url_for(theme.menu[i]) %>'><%- i %><i class="fas fa-angle-down"></i></a>
-                            <div class="dropdown">
-                                <% for (var j in theme.services) { %>
-                                    <a class='nav-link' href='<%- url_for(theme.services[j]) %>'><%- j %></a>
-                                <% } %> 
-                            </div>
-                        </div>
-                    <% } else if (i === 'Treated Conditions') { %>
-                        <div class="menu-link-wrapper">
-                            <a class='nav-link' href='<%- url_for(theme.menu[i]) %>'><%- i %><i class="fas fa-angle-down"></i></a>
-                            <div class="dropdown">
-                                <% for (var j in theme.conditions) { %>
-                                    <a class='nav-link' href='<%- url_for(theme.conditions[j]) %>'><%- j %></a>
-                                <% } %> 
-                            </div>
-                        </div>
-                    <% } else if (i === 'About') { %>
-                        <div class="menu-link-wrapper">
-                            <a class='nav-link' href='<%- url_for(theme.menu[i]) %>'><%- i %><i class="fas fa-angle-down"></i></a>
-                            <div class="dropdown">
-                                <% for (var j in theme.about) { %>
-                                    <a class='nav-link' href='<%- url_for(theme.about[j]) %>'><%- j %></a>
-                                <% } %> 
-                            </div>
-                        </div>
-                    <% } else { %>
-                        <a class='nav-link' href='<%- url_for(theme.menu[i]) %>'><%- i %></a>
                     <% } %>
                 <% } %>
             </div>
