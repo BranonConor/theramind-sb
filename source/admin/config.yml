@@ -40,40 +40,7 @@ collections:
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "top-level-pages"
-    label: "Top-Level Pages"
-    files:
-      - label: "Services Page"
-        name: "services"
-        file: "source/services/index.md"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: "Body", name: "body", widget: "markdown"}
-      - label: "Conditions Treated Page"
-        name: "conditions"
-        file: "source/conditions/index.md"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: "Body", name: "body", widget: "markdown"}
-      - label: "Services Page"
-        name: "services"
-        file: "source/services/index.md"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: "Body", name: "body", widget: "markdown"}
-      - label: "About Page"
-        name: "about"
-        file: "source/about/index.md"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: "Body", name: "body", widget: "markdown"} 
-      - label: "Contact Page"
-        name: "contact"
-        file: "source/contact/index.md"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: "Body", name: "body", widget: "markdown"}
-  - name: "pages" # Used in routes, e.g., /admin/collections/blog
-    label: "Pages" # Used in the UI
+    label: "Top Level Pages" # Used in the UI
     folder: "source/" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "index" # Filename template, e.g., YYYY-MM-DD-title.md
@@ -81,6 +48,22 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Draft", name: "draft", widget: "boolean", default: true}
       - {label: "Type", name: "type", widget: "hidden", default: "top-level"}
+      - {label: "Child Pages", name: "children", widget: "boolean", default: "false"}
+      - {label: "Menu Label", name: "menulabel", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "lower-level-pages" # Used in routes, e.g., /admin/collections/blog
+    label: "Lower Level Pages" # Used in the UI
+    folder: "source/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "index" # Filename template, e.g., YYYY-MM-DD-title.md
+    path: '{{title}}/{{slug}}'
+    fields: # The fields for each document, usually in front matter
+      - {label: "Draft", name: "draft", widget: "boolean", default: true}
+      - {label: "Type", name: "type", widget: "hidden", default: "lower-level"}
+      - {label: "Child Pages", name: "children", widget: "hidden", default: "false"}
+      - {label: "Parent Page Name", name: "parent", widget: "string"}
+      - {label: "Menu Label", name: "menulabel", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "site-configuration"
