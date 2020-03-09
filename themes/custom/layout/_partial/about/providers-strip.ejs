@@ -12,7 +12,7 @@
         <% let pages = site.pages %>
         <% pages.forEach(function(item) { %>
             <% if (item.menulabel === 'Providers') { %>
-                <a href="<%- url_for(theme.about.Providers) %>" class='button'>See Providers</a>
+                <a href="<%- url_for(item) %>" class='button'>See Providers</a>
             <% } %>
         <% }) %>
     </div>
