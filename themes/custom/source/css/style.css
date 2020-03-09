@@ -803,6 +803,9 @@ form .button:hover {
     justify-content: center;
 }
 /* ---------------- ABOUT PAGE COMPONENTS ---------------- */
+.providers-strip {
+    background: #F6F6F6;
+}
 .news-strip {
     padding: 50px 20%;
     background: #4b4b4b;
