@@ -11,7 +11,7 @@
     <div class="button-wrapper">
         <% let pages = site.pages %>
         <% pages.forEach(function(item) { %>
-            <% if (item.type === 'news') { %>
+            <% if (item.menulabel === 'News') { %>
                 <a href="<%- url_for(theme.about.News) %>" class='button'>See Blog</a>
             <% } %>
         <% }) %>
