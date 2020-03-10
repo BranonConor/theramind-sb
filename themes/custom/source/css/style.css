@@ -1264,6 +1264,9 @@ form .button:hover {
         padding: 75px 20px;
     }
     /* Services Strip */
+    .services-strip {
+        padding: 50px 5%;
+    }
     .service-card {
         width: 290px;
         height: 180px;
@@ -1327,6 +1330,11 @@ form .button:hover {
     .revealNavMobile {
         height: 40vh;
     }
+    
+    .thin-strip {
+        padding: 20px;
+    }
+
     /* Contact */
     .form-strip p {
         width: 80%;
@@ -1336,5 +1344,10 @@ form .button:hover {
     }
     input, select {
         transform: translateX(-3px);
+    }
+
+    .service-card {
+        width: 260px;
+        height: 150px;
     }
 }
