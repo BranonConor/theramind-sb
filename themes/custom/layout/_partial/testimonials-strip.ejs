@@ -5,7 +5,7 @@
         <% for (let i = 0; i < posts.length; i++) { %> 
             <% if (posts[i].type === 'quote') { %>
                 <div class="testimonial inactive-quote">
-                    <h3><%- posts[i].content %></h3>
+                    <h3>"<%- posts[i].content %>"</h3>
                     <p>- <%- posts[i].initials %></p>
                 </div>
             <% } %>
