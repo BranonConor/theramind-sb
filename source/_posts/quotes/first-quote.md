@@ -1,7 +1,7 @@
 ---
-title: first-quote
-date: 2020-03-10 11:27:31
-tags:
+title: Test Quote
+date: 2020-03-10T11:27:31.000Z
+tags: null
 type: quote
 initials: B.E.
 ---
