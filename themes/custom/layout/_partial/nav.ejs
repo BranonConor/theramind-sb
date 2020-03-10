@@ -51,8 +51,13 @@
         </div>
     </div>
     <div class='nav-mobile'>
-        <% for (var i in theme.menu) { %>
-            <a class='mobile-link' href='<%- url_for(theme.menu[i]) %>'><%- i %></a>
+        <a class='mobile-link' href='<%- config.root %>'>Home</a>
+        <% for (let i = 0; i < site.pages.data.length; i++) { %>
+            <% let thisPage = site.pages.data %>
+            <!-- Print top level pages -->
+            <% if (thisPage[i].type === 'top-level') { %>
+                    <a class='mobile-link' href='<%- config.root %><%- thisPage[i].path %>'><%- thisPage[i].menulabel %></a>
+            <% } %>
         <% } %>
         <div class="call-now-mobile">
             <p><i class="fas fa-phone-volume"></i>Call now for a FREE consultation! <span>+1 (805) 845-4455</span></p>
