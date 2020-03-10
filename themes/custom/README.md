@@ -22,6 +22,9 @@ Two collections added to the CMS UI:
 - Lower Level Pages : has new 'parent' string field, which will be used to link this child page to its parent in the navigation
 - Both pages also now use 'menulabel' fields, which determine what their name will be in the rendered navigation menu. This allows you to change the title of the page that is rendered to that page, without affecting its place in the page tree. 
 
+# FOR ENGINEERS
+- Be sure to git pull from the origin on Github prior to doing any work, for cleanest workflow.
+- Because Netlify CMS writes changes to the Github repository directly, you'll want to grab those changes to your local before further development. 
 
 # SITE MAP
 This site is a bit more complex than the average blog site, as it allows for copy-editing across almost the entire site vs. only the blog posts. Here's a summary of the site map:
