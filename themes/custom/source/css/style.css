@@ -830,10 +830,16 @@ form .button:hover {
     align-items: flex-start;
     padding: 50px 10%;
 }
+.services-strip svg {
+    width: 280px;
+    height: 260px;
+}
 .service-card {
     width: 310px;
     height: 200px;
     background: #eee;
+    border: 1px solid #eee;
+    border-radius: 10px;
     text-align: center;
     margin: 5px;
     padding: 10px;
@@ -845,12 +851,30 @@ form .button:hover {
 }
 .service-card:hover {
     transform: translateY(-7px);
+    border: 1px solid var(--main-accent-color);
+}
+.services-strip a::after {
+    display: none;
 }
 /* -------------- TMS PAGE COMPONENTS --------- */
 .tms-strip {
     padding: 0 20% 50px 20%;
 }
 /* -------------- DIFFERENT PAGE DESIGNS ------------ */
+/*---- ONE COLUMN ----*/
+.one-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+/*---- TWO COLUMN ----*/
 .two-column {
     display: flex;
     flex-direction: row;
