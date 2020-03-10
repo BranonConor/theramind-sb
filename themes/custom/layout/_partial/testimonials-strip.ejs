@@ -2,16 +2,23 @@
     <div class="overlay">
         <i class="fas fa-chevron-left fa-4x left-arrow"></i>
         <% let posts = site.posts.data; %>
-        <% for (let i = 0; i < posts.length; i++) { %> 
-            <% if ((posts[i].type === 'quote') && (posts[i] !== posts[1])) { %>
-                <div class="testimonial inactive-quote">
-                    <h3><%- posts[i].content %></h3>
-                    <p>- <%- posts[i].initials %></p>
-                </div>
-            <% } else if ((posts[i].type === 'quote') && (posts[i] === posts[1])) { %>
+        <% let quotes = []; %>
+        <% for (let i = 0; i < posts.length; i++) { %>
+            <% if (posts[i].type === 'quote') { %>
+                <% quotes.push(posts[i]); %>
+            <% } %>
+        <% } %>
+        <%- console.log(quotes); %>
+        <% for (let i = 0; i < quotes.length; i++) { %>
+            <% if (i === 1) { %>
                 <div class="testimonial active-quote">
-                    <h3><%- posts[i].content %></h3>
-                    <p>- <%- posts[i].initials %></p>
+                    <h3><%- quotes[i].content %></h3>
+                    <p>- <%- quotes[i].initials %></p>
+                </div>
+            <% } else { %>
+                <div class="testimonial inactive-quote">
+                    <h3><%- quotes[i].content %></h3>
+                    <p>- <%- quotes[i].initials %></p>
                 </div>
             <% } %>
         <% } %>
