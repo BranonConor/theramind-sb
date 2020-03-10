@@ -1,7 +1,7 @@
 ---
 draft: false
 type: quote
-title: E.P.
+title: M.S.
 date: 2020-03-10T18:44:16.908Z
 initials: 'M.S., after TMS Therapy.'
 ---
