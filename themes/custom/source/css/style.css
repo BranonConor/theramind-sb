@@ -821,6 +821,11 @@ form .button:hover {
 .news-strip .button:hover::before {
     color: white;
 }
+/* ---------------- CONDITIONS PAGE COMPONENTS ---------------- */
+.conditions-strip svg {
+    width: 300px;
+    height: 280px;
+}
 /* -------------- SERVICES PAGE COMPONENTS ------------- */
 .services-strip {
     height: auto;
