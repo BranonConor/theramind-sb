@@ -1263,6 +1263,11 @@ form .button:hover {
     .about-strip {
         padding: 75px 20px;
     }
+    /* Services Strip */
+    .service-card {
+        width: 290px;
+        height: 180px;
+    }
     /* Contact Form */
     fieldset {
         width: 300px;
