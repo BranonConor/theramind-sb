@@ -739,7 +739,8 @@ form .button:hover {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    background-color: #eee;
+    background-color: #464646;
+    color: white;
 }
 .sidebar-module {
     width: 225px;
@@ -747,10 +748,11 @@ form .button:hover {
 }
 .sidebar-module h4 {
     text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 3px;
 }
-
+.sidebar-module a {
+    color: white;
+    font-size: 0.85rem;
+}
 /* ---------------- FULL PAGE POSTS --------------- */
 .post-container {
     display: flex;
