@@ -871,7 +871,7 @@ form .button:hover {
     justify-content: center;
 }
 .text-right .left {
-    align-items: center;
+    align-items: flex-start;
 }
 .text-right .right {
     align-items: flex-start;
@@ -898,7 +898,7 @@ form .button:hover {
     margin-right: 50px;
 }
 .text-left .right {
-    align-items: center;
+    align-items: flex-end;
 }
 .text-left .button-wrapper {
     display: flex;
