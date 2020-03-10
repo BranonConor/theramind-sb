@@ -1,6 +1,8 @@
 <div class="conditions-strip">
-    <i class="fas fa-stethoscope fa-2x"></i>
-    <h2>Services and Conditions Treated</h2>
+    <% if (page.menulabel !== 'Treated Conditions') { %>
+        <i class="fas fa-stethoscope fa-2x"></i>
+        <h2>Services and Conditions Treated</h2>
+    <% } %>
     <div class="card-container">
         <a class="card1" href="<%- config.root %>lower-level-pages/tms-therapy">
             <i class="fas fa-bolt"></i>

@@ -956,7 +956,7 @@ form .button:hover {
     }
     /* Conditions Treated */
     .conditions-strip {
-        padding: 20px 0 50px 0;
+        padding: 25px 0 25px 0;
         background: url(/images/gradient.jpeg);
         background-size: cover;
     }
