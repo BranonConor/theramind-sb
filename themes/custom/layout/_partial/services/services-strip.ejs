@@ -1,17 +1,30 @@
 <div class="component-post services-strip">
-    <a href="/services/tms-therapy">    
+    <% let pages = site.pages.data %>
+    <% let hbotLink = ''; %>
+    <% let tmsLink = ''; %>
+    <% let diagnosticsLink = ''; %>
+    <% for (let i = 0; i < pages.length; i++) { %>
+        <% if (pages[i].menulabel === 'HBOT') { %>
+            <% hbotLink = pages[i].path; %>
+        <% } else if (pages[i].menulabel === 'TMS Therapy') { %>
+            <% tmsLink = pages[i].path; %>
+        <% } else if (pages[i].menulabel === 'Diagnostics') { %>
+            <% diagnosticsLink = pages[i].path; %>
+        <% } %>
+    <% } %>
+    <a href="<%- url_for(tmsLink) %>">    
         <div class="service-card">
             <h3 class='component-title'>TMS Therapy</h3>
             <p>TMS Therapy is a non-invasive brain-stimluation technique.</p>
         </div>
     </a>
-    <a href="<%- url_for(theme.services.HBOT) %>">
+    <a href="<%- url_for(hbotLink) %>">
         <div class="service-card">
             <h3 class='component-title'>HBOT</h3>
             <p>HBOT is a treatment that increases blood-oxygen saturation.</p>
         </div>
     </a>
-    <a href="<%- url_for(theme.services.Diagnostics) %>">
+    <a href="<%- url_for(diagnosticsLink) %>">
         <div class="service-card">
             <h3 class='component-title'>Advanced Diagnostics</h3>
             <p>We utilize many different cutting-edge diagnostic tools to tailor treatment to each patient.</p>
