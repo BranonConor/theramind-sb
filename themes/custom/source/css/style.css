@@ -120,8 +120,10 @@ a:hover::after {
     z-index: 4;
     top: 0;
     background: white;
-    border-bottom: 2px solid black;
     will-change: transform;
+    -webkit-box-shadow: 1px 7px 16px -8px rgba(0,0,0,0.49);
+    -moz-box-shadow: 1px 7px 16px -8px rgba(0,0,0,0.49);
+    box-shadow: 1px 7px 16px -8px rgba(0,0,0,0.49);
 }
 .navbar-wrapper {
     display: flex;
@@ -797,11 +799,6 @@ form .button:hover {
 .component-post h1, .component-post h2, .component-post h3, .component-post h4, .component-post h5, .component-post h6 {
     text-align: center;
 }
-.button-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 /* ---------------- ABOUT PAGE COMPONENTS ---------------- */
 .providers-strip {
     background: #F6F6F6;
@@ -849,9 +846,75 @@ form .button:hover {
 .tms-strip {
     padding: 0 20% 50px 20%;
 }
+/* -------------- DIFFERENT PAGE DESIGNS ------------ */
+.two-column {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 20%;
+}
+.two-column svg {
+    width: 380px;
+    height: 360px;
+}
+/* ---- Two Column, Text Right ---- */
+.text-right .right, .text-right .left {
+    height: 100%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.text-right .left {
+    align-items: center;
+}
+.text-right .right {
+    align-items: flex-start;
+    margin-left: 50px;
+}
+.text-right .button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.text-right .button-wrapper .button {
+    margin: 20px 0 20px 0;
+}
+/* ---- Two Column, Text Left ---- */
+.text-left .right, .text-left .left {
+    height: 100%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.text-left .left {
+    align-items: flex-start;
+    margin-right: 50px;
+}
+.text-left .right {
+    align-items: center;
+}
+.text-left .button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.text-left .button-wrapper .button {
+    margin: 20px 0 20px 0;
+}
 
 
 /* ---------------- MEDIA QUERIES ----------------- */
+@media only screen and (max-width: 1400px) {
+    .text-right .right, .text-right .left {
+        width: 300px;
+    }
+    .text-right .right, .text-right .left {
+        width: 300px;
+    }
+}
 @media only screen and (max-width: 1200px) {
     /* Top Strip */
     .top-strip img {
@@ -874,6 +937,12 @@ form .button:hover {
     }
     .business-info {
         height: 300px;
+    }
+}
+@media only screen and (max-width: 1100px) {
+    .two-column svg {
+        width: 300px;
+        height: 280px;
     }
 }
 @media only screen and (max-width: 950px) {
@@ -1075,6 +1144,12 @@ form .button:hover {
         transform: translateY(-10px) rotate(48deg);
     /*  translate(-9px, -12px) */
     }
+
+
+    .two-column svg {
+        width: 250px;
+        height: 230px;
+    }
 }
 @media only screen and (max-width: 670px) {
     /* Nav */
@@ -1112,6 +1187,11 @@ form .button:hover {
     /* Contact Form */
     fieldset {
         width: 400px;
+    }
+
+    .two-column svg {
+        width: 200px;
+        height: 180px;
     }    
 }
 @media only screen and (max-width: 460px) {
@@ -1185,6 +1265,22 @@ form .button:hover {
     .sidebar-module {
         width: 100%;
         padding: 0;
+    }
+
+    .two-column {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .text-right .right, .text-right .left, .text-left .left, .text-left .right {
+        margin: 0 0 0 0;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .text-right .button-wrapper, .text-left .button-wrapper {
+        justify-content: center;
     }
 }
 @media only screen and (max-width: 340px) {
