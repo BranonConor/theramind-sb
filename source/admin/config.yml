@@ -39,6 +39,18 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "quotes" # Used in routes, e.g., /admin/collections/blog
+    label: "Testimonial Quotes" # Used in the UI
+    folder: "source/_posts/quotes" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Draft", name: "draft", widget: "boolean", default: true, required: false}
+      - {label: "Type", name: "type", widget: "hidden", default: "quote"}
+      - {label: "Title", name: "title", widget: "string", required: false}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}  
+      - {label: "Initials", name: "initials", widget: "string"}
   - name: "top-level-pages"
     label: "Top Level Pages" # Used in the UI
     folder: "source/top-level-pages" # The path to the folder where the documents are stored
@@ -46,7 +58,7 @@ collections:
     slug: "index" # Filename template, e.g., YYYY-MM-DD-title.md
     path: '{{title}}/{{slug}}'
     fields: # The fields for each document, usually in front matter
-      - {label: "Draft", name: "draft", widget: "boolean", default: true}
+      - {label: "Draft", name: "draft", widget: "boolean", default: true, requried: false}
       - {label: "Type", name: "type", widget: "hidden", default: "top-level"}
       - {label: "Child Pages", name: "children", widget: "boolean", default: "false"}
       - {label: "Menu Label", name: "menulabel", widget: "string"}
@@ -59,7 +71,7 @@ collections:
     slug: "index" # Filename template, e.g., YYYY-MM-DD-title.md
     path: '{{title}}/{{slug}}'
     fields: # The fields for each document, usually in front matter
-      - {label: "Draft", name: "draft", widget: "boolean", default: true}
+      - {label: "Draft", name: "draft", widget: "boolean", default: true, required: false}
       - {label: "Type", name: "type", widget: "hidden", default: "lower-level"}
       - {label: "Child Pages", name: "children", widget: "hidden", default: "false"}
       - {label: "Parent Page Name", name: "parent", widget: "string"}
