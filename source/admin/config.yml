@@ -62,7 +62,6 @@ collections:
       - {label: "Type", name: "type", widget: "hidden", default: "top-level"}
       - {label: "Child Pages", name: "children", widget: "boolean", default: "false"}
       - {label: "Menu Label", name: "menulabel", widget: "string"}
-      - {label: "Menu Order", name: "order", widget: "number"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "lower-level-pages" # Used in routes, e.g., /admin/collections/blog
