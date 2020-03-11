@@ -5,5 +5,6 @@ layout: contact
 type: top-level
 menulabel: Contact
 children: false
+order: 4
 ---
 Contact TheraMind!

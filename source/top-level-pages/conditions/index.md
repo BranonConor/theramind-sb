@@ -5,5 +5,6 @@ layout:
 type: top-level
 menulabel: Treated Conditions
 children: true
+order: 2
 ---
 Here is some general information about the conditions we treat at our center.
