@@ -19,28 +19,38 @@
                 <div class="menu-link-wrapper">
                     <a class='nav-link' href='<%- config.root %>'>Home</a>
                 </div>
+                <% let pages = site.pages.data; %>
+                <% const topLevelPages = []; %>
+                <% const lowerLevelPages = []; %>
                 <!-- Loop through all pages -->
-                <% for (let i = 0; i < site.pages.data.length; i++) { %>
-                    <% let thisPage = site.pages.data %>
-                    <!-- Print top level pages -->
-                    <% if (thisPage[i].type === 'top-level') { %>
-                        <div class="menu-link-wrapper">
-                            <!-- If the top-level page has child pages, give it a dropdown icon -->
-                            <% if (thisPage[i].children === true) { %>
-                                <a class='nav-link' href='<%- config.root %><%- thisPage[i].path %>'><%- thisPage[i].menulabel %><i class="fas fa-angle-down"></i></a>
-                                <div class="dropdown">
-                                <!-- If there's childern pages, loop through all children and pick the ones that have parent = this page's title --> 
-                                    <% for (let j = 0; j < site.pages.data.length; j++) { %>
-                                        <% if ((thisPage[j].type === 'lower-level') && (thisPage[j].parent === thisPage[i].menulabel)) { %>
-                                            <a class='nav-link' href='<%- config.root %><%- thisPage[j].path %>'><%- thisPage[j].menulabel %></a>
-                                        <% } %>
-                                    <% } %>
-                                </div>
-                            <% } else { %>
-                                <a class='nav-link' href='<%- config.root %><%- thisPage[i].path %>'><%- thisPage[i].menulabel %></a>
-                            <% } %>
-                        </div>
+                <% for (let i = 0; i < pages.length; i++) { %>
+                    <!-- Save top level pages in order, based on their order designation -->
+                    <% if (site.pages.findOne({order: i})) { %>
+                        <% topLevelPages.push(site.pages.findOne({order: i})); %>
                     <% } %>
+                    <% if (pages[i].type === 'lower-level') { %>
+                        <% lowerLevelPages.push(pages[i]); %>
+                    <% } %>
+                <% } %>
+                <!-- Loop through all top-level pages -->
+                <% for (let i = 0; i < topLevelPages.length; i++) { %>
+                    <!-- Print them according to their order peroperty -->
+                    <div class="menu-link-wrapper">
+                        <!-- If the top-level page has child pages, give it a dropdown icon -->
+                        <% if (topLevelPages[i].children === true) { %>
+                            <a class='nav-link' href='<%- config.root %><%- topLevelPages[i].path %>'><%- topLevelPages[i].menulabel %><i class="fas fa-angle-down"></i></a>
+                            <div class="dropdown">
+                            <!-- If there's childern pages, loop through all children and pick the ones that have parent = this page's title --> 
+                                <% for (let j = 0; j < lowerLevelPages.length; j++) { %>
+                                    <% if (lowerLevelPages[j].parent === topLevelPages[i].menulabel) { %>
+                                        <a class='nav-link' href='<%- config.root %><%- lowerLevelPages[j].path %>'><%- lowerLevelPages[j].menulabel %></a>
+                                    <% } %>
+                                <% } %>
+                            </div>
+                        <% } else { %>
+                            <a class='nav-link' href='<%- config.root %><%- topLevelPages[i].path %>'><%- topLevelPages[i].menulabel %></a>
+                        <% } %>
+                    </div>
                 <% } %>
             </div>
             <div class='hamburger' onclick='hamburgerClick(this)'>
