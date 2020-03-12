@@ -19,3 +19,7 @@
 <% if (page.menulabel == 'TMS Therapy') { %>
     <%- partial('_partial/services/tms-strip') %>
 <% } %> 
+<!-- If it's the TMS Page, render tms-strip.ejs -->
+<% if (page.menulabel == 'Providers') { %>
+    <%- partial('_partial/about/providers-page') %>
+<% } %> 
