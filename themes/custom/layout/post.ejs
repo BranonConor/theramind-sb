@@ -5,3 +5,9 @@
     </div>
     <%- partial('_partial/sidebar') %>
 <% } %>
+<% if (page.type === 'provider') { %>
+    <%- partial('_partial/provider-full', {item: page}) %> 
+    <div class="button-wrapper">
+        <a href="<% config.root %>/lower-level-pages/providers" class='button'>Back To Providers</a>  
+    </div>
+<% } %>
