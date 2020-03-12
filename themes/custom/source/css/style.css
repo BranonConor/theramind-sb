@@ -867,6 +867,22 @@ form .button:hover {
 .tms-strip {
     padding: 0 20% 50px 20%;
 }
+/* ------------ PROVIDERS PAGE ------------ */
+.providers-page {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.provider-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 200px;
+}
 /* -------------- DIFFERENT PAGE DESIGNS ------------ */
 /*---- ONE COLUMN ----*/
 .one-column {
