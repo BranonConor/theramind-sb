@@ -1,0 +1,14 @@
+
+<!-- Note that on page.ejs, "page" was passed in as the "item" -->
+<div class="post-full">
+    <!-- Title -->
+    <h2 class="post-title"><%- item.name %></h2>
+    <!-- Date and Author -->
+    <img src="<%- item.image %>" alt="<%- item.name %> Portrait">
+    <p class="post-meta">
+        <%- item.credentials %>
+    </p>
+    <!-- Content -->
+    <%- item.content %>
+    <hr />
+</div>

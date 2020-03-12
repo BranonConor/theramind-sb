@@ -60,7 +60,8 @@ collections:
       - {label: "Draft", name: "draft", widget: "boolean", default: true, required: false}
       - {label: "Type", name: "type", widget: "hidden", default: "provider"}
       - {label: "Provider's Last Name Only (lowercase)", name: "title", widget: "string"}      
-      - {label: "Provider Full Name and Credentials", name: "name", widget: "string"}
+      - {label: "Provider Full Name", name: "name", widget: "string"}
+      - {label: "Title / Credentials", name: "credentials", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}  
       - {label: "Image", name: "image", widget: "image"}
   - name: "top-level-pages"
