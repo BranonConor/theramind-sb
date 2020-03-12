@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 type: provider
 name: Dr. David Agnew
 title: Dr. David Agnew
