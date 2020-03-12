@@ -1,0 +1,12 @@
+<div class="providers-page">
+    <% let posts = site.posts.data; %>
+    <% for (let i = 0; i < posts.length; i++) { %>
+        <% if (posts[i].type === 'provider') { %>
+            <div class="provider-card">
+                <img src="<%- posts[i].image %>" alt="<%- posts[i].name %> Portrait">
+                <h3><%- posts[i].name %></h3>
+                <p><%- posts[i].content %></p>
+            </div>
+        <% } %>
+    <% } %> 
+</div>
