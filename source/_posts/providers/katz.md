@@ -4,7 +4,7 @@ type: provider
 title: katz
 name: Dr. Eli Katz
 credentials: 'Medical Director, Psychiatrist'
-image: /custom/source/images/uploads/katz-1-.jpg
+image: images/uploads/katz1.jpg
 ---
 Eli Katz, M.D., treats adults and seniors of all ages. He has a unique interest in working with patients on issues related to, but not limited to: mental illness, personality disorder, attention-deficit/hyperactivity disorder (ADHD), depressive disorder, depression, schizophrenia, bipolar disorder, manic depressive disorder, post traumatic stress disorder (PTSD), sleep disorders, insomnia and mood disorders.
 
