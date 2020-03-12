@@ -59,7 +59,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Draft", name: "draft", widget: "boolean", default: true, required: false}
       - {label: "Type", name: "type", widget: "hidden", default: "provider"}
-      - {label: "Title", name: "title", widget: "string", default: '{{name}}'}      
+      - {label: "Title", name: "title", widget: "string", default: "Please enter the provider's last name, all lowercase, here"}      
       - {label: "Provider Name", name: "name", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}  
       - {label: "Image", name: "image", widget: "image"}
