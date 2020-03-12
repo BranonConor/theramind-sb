@@ -917,6 +917,12 @@ form .button:hover {
 .provider-card:hover {
     transform: translateY(-8px);
 }
+.provider-card p {
+    font-style: italic;
+    color: grey;
+    margin-top: 0;
+    font-size: 0.9rem;
+}
 /* -------------- DIFFERENT PAGE DESIGNS ------------ */
 /*---- ONE COLUMN ----*/
 .one-column {
