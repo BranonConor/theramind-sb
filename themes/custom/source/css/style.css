@@ -808,6 +808,18 @@ form .button:hover {
     margin-left: auto;
     margin-right: auto;
 }
+/* ---------------- TAGS AND CATEGORIES PAGES ----------- */
+.blog-archive-title {
+    text-align: center;
+    margin: 20px 0 20px 0;
+    padding: 50px 0 50px 0;
+}
+.archive-card {
+    text-align: center;
+}
+.list-styled-list-count, .archive-list-count {
+    display: none;
+}
 /* ---------------- POST COMPONENTS ----------- */
 .component-post {
     padding: 50px 20%;

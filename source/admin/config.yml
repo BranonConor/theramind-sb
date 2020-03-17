@@ -16,24 +16,22 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Draft", name: "draft", widget: "boolean", default: true}
+      - {label: "Draft", name: "draft", widget: "boolean", default: true, required: false}
       - {label: "Type", name: "type", widget: "hidden", default: "blog"}
       - {label: "Excerpt", name: "excerpt", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Categories", name: "categories", widget: "string"}
-      - {label: "Tags", name: "tags", widget: "string"}
+      - {label: "Categories", name: "categories", widget: "list"}
+      - {label: "Tags", name: "tags", widget: "list"}
   - name: "components" # Used in routes, e.g., /admin/collections/blog
     label: "Component" # Used in the UI
     folder: "source/_posts/components" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Draft", name: "draft", widget: "boolean", default: true}
+      - {label: "Draft", name: "draft", widget: "boolean", default: true, required: false}
       - {label: "Type", name: "type", widget: "hidden", default: "component"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
@@ -51,6 +49,8 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}  
       - {label: "Initials", name: "initials", widget: "string"}
+      - {label: "Categories", name: "categories", widget: "list"}
+      - {label: "Tags", name: "tags", widget: "list"}
   - name: "providers" # Used in routes, e.g., /admin/collections/blog
     label: "Providers" # Used in the UI
     folder: "source/_posts/providers" # The path to the folder where the documents are stored
