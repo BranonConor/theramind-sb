@@ -1,7 +1,7 @@
 <%
     var title = '';
-    if (page.category) title = page.category;
-    if (page.tag) title = page.tag;
+    if (page.category) title = `${page.category.charAt(0).toUpperCase() + page.category.slice(1)} Posts`;
+    if (page.tag) title = `#${page.tag.charAt(0).toUpperCase() + page.tag.slice(1)} Posts`;
     if (page.archive){
         if (page.year) title = page.year + (page.month ? '/' + page.month : '');
         else title = "Archives";
