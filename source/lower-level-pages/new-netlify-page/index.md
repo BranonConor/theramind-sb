@@ -1,6 +1,6 @@
 ---
 draft: false
-type: component
+type: lower-level
 parent: Treated Conditions
 menulabel: New Page
 title: New Netlify Page

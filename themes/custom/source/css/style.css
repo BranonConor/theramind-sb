@@ -274,7 +274,7 @@ a:hover::after {
     border-bottom: 1px solid #eee;
 }
 .menu-link-wrapper:hover .dropdown {
-    max-height: 300px;
+    max-height: 500px;
 }
 .menu-link-wrapper:hover .nav-link i {
     transform: translateX(2px) translateY(6px);
