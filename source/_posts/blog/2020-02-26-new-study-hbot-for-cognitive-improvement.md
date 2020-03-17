@@ -6,7 +6,7 @@ excerpt: 'Check out an awesome new study about HBOT improving cardiovascular hea
 title: 'New Study: HBOT for Cardiac Improvement'
 date: 2020-02-25T20:46:00.000Z
 categories: HBOT
-tags: 'hbot, cognition'
+tags: '#hbot #cognition #research'
 ---
 A new study just came out for Hyberbaric Oxygen Therapy, or HBOT!
 
