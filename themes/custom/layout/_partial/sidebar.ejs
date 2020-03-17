@@ -1,13 +1,17 @@
 <div class="sidebar">
     <div class="sidebar-module">
         <h4>Recent</h4>
+        <!-- Push blog posts to one array, and their dates to another -->
         <% const blogPosts = [];
+        const blogObj = {};
         site.posts.each((post) => {
             if (post.type === 'blog') {
                 blogPosts.push(post);
+                blogObj.post = post;
             };
         }); %>
         <ul class="list-styled">
+            <!-- Loop through posts with a 'blog' type and print a few recents -->
             <% for (let i = blogPosts.length-1; i > blogPosts.length-3; i--) { %>
                 <li><a href="<%- url_for(blogPosts[i].path) %>"><%- blogPosts[i].title %></a></li>
             <% } %>
@@ -15,7 +19,8 @@
     </div>
     <div class="sidebar-module">
         <h4>Archives</h4>
-        <%- list_archives(site.posts, {
+        <%- console.log(blogObj); %>
+        <%- list_archives(blogObj, {
             class: 'list-styled',
             transform(str) {
                 return titlecase(str);

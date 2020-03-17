@@ -10,8 +10,10 @@
 <% if(title) { %>
    <h2 class="blog-archive-title"><%- title %></h2>
 <% } %>
-<% page.posts.each(function(item){ %>
-<%- partial('_partial/article-archive', {item: item}) %>
+<% page.posts.each(function(item) { %>
+    <% if (item.type === 'blog') { %>
+        <%- partial('_partial/article-archive', {item: item}) %>
+    <% } %>
 <% }); %>
 <%- partial('_partial/pagination') %>
     <div class="button-wrapper">
