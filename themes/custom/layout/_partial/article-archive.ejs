@@ -1,15 +1,10 @@
 
-<div class="blog-post">
+<div class="component-post">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
+    <p><%- item.date %></p>
+    <h2 class="archive-card">
         <a href="<%- config.root %><%- item.path %>">
             <%- item.title || item.link%>
         </a>
     </h2>
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        <% if(item.author) { %>
-            by <%- item.author %>
-        <% } %>
-    </p>
 </div>

@@ -1,36 +1,45 @@
 <div class="sidebar">
     <div class="sidebar-module">
         <h4>Recent</h4>
+        <% const blogPosts = [];
+        site.posts.each((post) => {
+            if (post.type === 'blog') {
+                blogPosts.push(post);
+            };
+        }); %>
         <ul class="list-styled">
-            <% let posts = site.posts; %>
-            <% let news = []; %>
-            <% for (let i = posts.length-1; i > posts.length-3; i--) { %>
-                <% news.push(posts.data[i]); %>
+            <% for (let i = blogPosts.length-1; i > blogPosts.length-3; i--) { %>
+                <li><a href="<%- url_for(blogPosts[i].path) %>"><%- blogPosts[i].title %></a></li>
             <% } %>
-            <% news.forEach(function(item) { %>
-                <% if (item.type === 'blog') { %>
-                    <li><a href="<%- config.root %><%- item.path %>"><%- item.title %></a></li>
-                <% } %>
-            <% }); %>
         </ul>
     </div>
     <div class="sidebar-module">
         <h4>Archives</h4>
-        <ul class="list-styled">
-            <li><a href="#">March 2014</a></li>
-            <li><a href="#">February 2014</a></li>
-            <li><a href="#">January 2014</a></li>
-            <li><a href="#">December 2013</a></li>
-            <li><a href="#">November 2013</a></li>
-        </ul>
+        <%- list_archives(site.posts, {
+            class: 'list-styled',
+            transform(str) {
+                return titlecase(str);
+            }
+        }) %>
     </div>
     <div class="sidebar-module">
-        <h4>Elsewhere</h4>
-        <ul class="list-styled">
-            <li><a href="https://www.facebook.com/TheraMindSantaBarbara/">Facebook</a></li>
-            <li><a href="https://www.instagram.com/theramindsb/">Instagram</a></li>
-            <li><a href="https://twitter.com/theramindsb">Twitter</a></li>
-            <li><a href="https://www.linkedin.com/showcase/theramind-center-of-santa-barbara">LinkedIn</a></li>
-        </ul>
+        <% if (is_category() || is_page()) { %>
+            <h4>Categories</h4>
+            <%- list_categories(site.categories, {
+                class: 'list-styled',
+                transform(str) {
+                    return titlecase(str);
+                }
+            }) %>
+        <% } %>
+        <% if (is_tag() || is_post()) { %>
+            <h4>Tags</h4>
+            <%- list_tags(site.tags, {
+                class: 'list-styled',
+                transform(str) {
+                    return titlecase(str);
+                }
+            }) %>
+        <% } %>
     </div> 
 </div>
