@@ -1,9 +1,13 @@
 ---
-title: Active-Duty Patient Success Rates
-date: 2020-02-13 15:50:46
-tags: [study, research]
+draft: false
 type: blog
-excerpt: 'The numbers are in! Check out a recent study we did about Active Duty Air Force patients.'
+excerpt: >-
+  The numbers are in! Check out a recent study we did about Active Duty Air
+  Force patients.
+title: Active-Duty Patient Success Rates
+date: 2020-02-13T15:50:46.000Z
+categories: research
+tags: 'research, study, TMS, PTSD, Depression, Anxiety'
 ---
 
 ## The Numbers are In! 
