@@ -811,7 +811,8 @@ form .button:hover {
 /* ---------------- TAGS AND CATEGORIES PAGES ----------- */
 .blog-archive-title {
     text-align: center;
-    margin: 25px 0 0 10px;
+    margin: 20px 0 20px 0;
+    padding: 50px 0 50px 0;
 }
 
 /* ---------------- POST COMPONENTS ----------- */
