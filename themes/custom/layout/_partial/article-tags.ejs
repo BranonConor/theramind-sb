@@ -10,7 +10,6 @@
             <%- tags.push('<a href="' + config.root + tag.path + '">#' + tag.name + '</a>'); %>
         <% }); %>
     <div class="blog-tags-container">
-        <span class="glyphicon glyphicon-tags"></span>
-        <%- tags.join(' ') %>
+        <p>Tags: <%- tags.join(' ') %></p>
     </div>
     <% } %>
