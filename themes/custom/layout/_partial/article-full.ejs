@@ -8,11 +8,8 @@
         </a>
     </h2>
     <!-- Date and Author -->
-    <p class="post-meta">
+    <p class="post-date">
         <%= item.date.format(config.date_format) %>
-        <% if(item.author) { %>
-            by <%- item.author %>
-        <% } %>
     </p>
     <!-- Content -->
     <%- item.content %>

@@ -1,8 +1,8 @@
 
-<div class="component-post">
+<div class="archive-post">
     <!-- Title -->
-    <p><%- date(item.date) %></p>
     <h2 class="archive-card">
+        <p><%- date(item.date) %></p>
         <a href="<%- config.root %><%- item.path %>">
             <%- item.title || item.link%>
         </a>
