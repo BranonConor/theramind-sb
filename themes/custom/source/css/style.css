@@ -769,7 +769,7 @@ form .button:hover {
 .post-full p {
     padding: 20px 0;
 }
-.post-full .post-meta {
+.post-full .post-date {
     text-align: center;
     padding: 0;
 }
@@ -814,11 +814,51 @@ form .button:hover {
     margin: 20px 0 20px 0;
     padding: 50px 0 50px 0;
 }
+.archive-post {
+    padding: 50px 20%;
+    position: relative;
+}
 .archive-card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     text-align: center;
+    position: relative;
+    padding: 0 0 0 20px;
+}
+.archive-card p {
+    margin: 10px 20px;
+    position: relative;
+}
+.archive-card a {
+    margin: 10px 20px;
+}
+.archive-post::before {
+    content: '';
+    background-color: lightgrey;
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 20%;
+    z-index: 1;
+}
+.archive-post::after {
+    content: '';
+    background-color: lightgrey;
+    width: 20px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    z-index: 1;
 }
 .list-styled-list-count, .archive-list-count {
     display: none;
+}
+.blog-tags-container p, .blog-categories-container p {
+    margin: 0;
+    padding: 0;
 }
 /* ---------------- POST COMPONENTS ----------- */
 .component-post {
