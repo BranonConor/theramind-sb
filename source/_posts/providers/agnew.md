@@ -3,8 +3,8 @@ draft: false
 type: provider
 title: agnew
 name: Dr. David Agnew
-credentials: 'Medical Director, Neurologist'
-image: images/uploads/agnew.jpg
+credentials: Medical Director, Neurologist
+image: /images/uploads/agnew.jpg
 ---
 David C. Agnew, M.D. is one of the pioneers in pain medicine in the United States. Dr. Agnew is a cum laude graduate of Mercersburg Academy and Phi Beta Kappa graduate of Denison University. He completed his undergraduate medical studies at the University of Pittsburgh School of Medicine, interned at the Guthrie Clinic in Pennsylvania which was followed by a neurologic residency at the Barrow Neurologic Institute in Arizona. After completing one of the first fellowships in intractable pain studies ever given at the Institute of Neurology, Queen Square, London, England, he began his professional career as the Director of Neurology at the City of Hope National Medical Center. Working with an interdisciplinary team consisting of neurosurgeons, psychiatrists and anesthesiologists, pharmacologists and physical medicine specialists, as well as neurophysiological researchers, Dr. Agnew and his colleagues developed the basic treatment models confirmed by published clinical studies on which most chronic pain treatment programs in this country are based.
 
